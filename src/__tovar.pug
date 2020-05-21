@@ -1,0 +1,152 @@
+.xBlock__area.w0
+  .xBlock.w1
+    .tovarPage__area
+      .tovarPage
+        .tovarPage__top
+          .tovarPage__sliderArea
+            include __slider-tovar
+          .tovarPage__info
+            // <form class="" method="post">
+            .tovarTitle
+              .tovarTitle__logo
+                img(src='assets/img/vendor/camelactive/camel_active.png', alt='')
+              .tovarTitle__text
+                h1 Название товара
+            //
+              <div class="tovarPage__descTitle">
+              Родительская категория товара (например платье)
+              </div>
+            .tovarPage__desc
+              | Короткое описание товара в несоклько строчек Lorem ipsum dolor sit amet consectetur adipisicing
+              | elit. Ipsa optio corporis voluptates ea expedita molestiae ipsam, est esse modi libero beatae
+              | perferendis omnis inventore provident pariatur veniam. Omnis, in sit.
+            .tovarCard__icons.tovarCard__icons_inPage
+              .tovarCard__icon.tovarCard__icon_sale -25%
+              .tovarCard__icon.tovarCard__icon_new NEW
+              .tovarCard__icon.tovarCard__icon_hit ХИТ
+            .tovarDescTab__area
+              .table_outer250
+                table
+                  tbody
+                    tr
+                      td(colspan='2') Характеристики:
+                    tr
+                      td Пол
+                      td Женский
+                    tr
+                      td Сезон
+                      td Лето
+                    tr
+                      td Стиль
+                      td Спортивный
+                    tr
+                      td Материал
+                      td Хлопок
+                    tr
+                      td Размер
+                      td XL, L, S
+            .tovar__priceArea
+              .tovar__oldPrice Старая цена: 1800 руб
+              .tovar__price Цена: 1500 руб
+            .addToCartOuter
+              .number
+                button.minus -
+                input.cartCountInput(type='text', name='count', value='1')
+                button.plus +
+              a.tovar__addToCart.redBtn_withSpan(href='#', type='submit', name='ms2_action', value='cart/add')
+                span Купить
+            // </form>
+    .addToCartTab
+      table
+        tbody
+          tr
+            th
+              span.hide_600 Артикул
+              span.show_600 Арт
+            th Цена за шт./₽
+            th
+              span.hide_600 Упаковка, 
+              span.show_600 Уп., 
+              |                     шт.
+            th Цена уп./₽
+            th В корзине
+          tr
+            td
+              div 192_999_82019_00_35A
+            td
+              div 100
+            td
+              div 1
+            td
+              div 100
+            td
+              div
+                .number.number_inTab(data-wareid='54c93a0964ea5321eccc95d5', data-mode='qcont')
+                  span.minus_tab(data-wareid='54c93a0964ea5321eccc95d5', data-change='-1', title='Уменьшить количество') -
+                  input.cartCountInput(type='text', name='count', value='0', min='0', data-wareid='54c93a0964ea5321eccc95d5')
+                  span.plus_tab(data-wareid='54c93a0964ea5321eccc95d5', data-change='1', title='Увеличить количество') +
+          tr
+            td
+              div 192_999_82019_00_35A
+            td
+              div 100
+            td
+              div 10
+            td
+              div 1000
+            td
+              .text-center.number_inTabArea
+                .number.number_inTab(data-wareid='54c93a0964ea5321eccc95d5', data-mode='qcont')
+                  span.minus_tab(data-wareid='54c93a0964ea5321eccc95d5', data-change='-1', title='Уменьшить количество') -
+                  input.cartCountInput(type='text', name='count', value='0', min='0', data-wareid='54c93a0964ea5321eccc95d5')
+                  span.plus_tab(data-wareid='54c93a0964ea5321eccc95d5', data-change='1', title='Увеличить количество') +
+                //
+                  <div style="display: none;" data-wareid="@Model" data-mode="rcont" class="rcontArea">
+                  <div class="rcont__item" data-wareid="@Model" data-change="A">
+                  <span class="rcont__itemInfo" title="@LC(MLText.According)"
+                  >@LC(MLText.Required): <span data-wareid="@Model" data-mode="rval"></span>
+                  </span>
+                  <img
+                  class="tbl-control valign-content"
+                  src="~/img/elements/redcartenter.png"
+                  title="@LC(MLText.AddRequired)"
+                  />@*data-wareid="@wid" data-change="A"*@
+                  </div>
+                  <div class="spacer-6"></div>
+                  </div>
+                .rcontArea(style='display: block;', data-wareid='@Model', data-mode='rcont')
+                  .rcont__item(data-wareid='@Model', data-change='A')
+                    span.rcont__itemInfo(title='Исходя из количества других товаров в корзине')
+                      | Требуется: 
+                      span(data-wareid='@Model', data-mode='rval') 5
+          tr
+            td
+              div 192_999_82019_00_35A
+            td
+              div 100
+            td
+              div 20
+            td
+              div 2000
+            td
+              div
+                .number.number_inTab(data-wareid='54c93a0964ea5321eccc95d5', data-mode='qcont')
+                  span.minus_tab(data-wareid='54c93a0964ea5321eccc95d5', data-change='-1', title='Уменьшить количество') -
+                  input.cartCountInput(type='text', name='count', value='0', min='0', data-wareid='54c93a0964ea5321eccc95d5')
+                  span.plus_tab(data-wareid='54c93a0964ea5321eccc95d5', data-change='1', title='Увеличить количество') +
+          tr
+            td
+              div 192_999_82019_00_35A
+            td
+              div 100
+            td
+              div 30
+            td
+              div 3000
+            td
+              div
+                .number.number_inTab(data-wareid='54c93a0964ea5321eccc95d5', data-mode='qcont')
+                  span.minus_tab(data-wareid='54c93a0964ea5321eccc95d5', data-change='-1', title='Уменьшить количество') -
+                  input.cartCountInput(type='text', name='count', value='0', min='0', data-wareid='54c93a0964ea5321eccc95d5')
+                  span.plus_tab(data-wareid='54c93a0964ea5321eccc95d5', data-change='1', title='Увеличить количество') +
+    

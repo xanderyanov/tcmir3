@@ -1,0 +1,52 @@
+:root {
+  --colorFFF: #fff;
+  --color000: #000;
+  --colorLightGrey: #f6f6fa;
+  --colorGrey: #bebebe;
+  --colorDarkGrey: #6b6b6b;
+  --color1: rgba(65, 51, 40, 0.6);
+  --color2: rgba(65, 51, 40, 0.8);
+  /* --redFill: #f76060; */
+  --redFill: #ff4141;
+  --redFillhover: #ff4141;
+  --tColor: #413328;
+  --x1grey: #929292;
+  --x1greyLight: #aaaaaa;
+}
+
+.w0 {
+  width: 100%;
+  position: relative;
+}
+
+.w1 {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 0 0 0;
+}
+
+.colorFFF {
+  color: #ffffff;
+}
+
+.color000 {
+  color: #000000;
+}
+
+.bgE5E5E5 {
+  background-color: #e5e5e5;
+}
+
+a.hover {
+  text-decoration: none !important;
+}
+
+.hide_600 {
+  display: block;
+  display: inline-block;
+}
+
+.show_600 {
+  display: none;
+}

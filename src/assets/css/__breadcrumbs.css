@@ -1,0 +1,43 @@
+.breadcrumbs__area {
+  padding: 10px 0 10px;
+}
+.breadcrumbs {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  color: #000;
+  font-size: 0.75rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
+.breadcrumbs div:first-child {
+  margin: 0 5px 0 0;
+}
+.breadcrumbs div {
+  margin: 0 5px;
+}
+.breadcrumbs div a {
+  color: #000;
+  font-size: 0.75rem;
+  font-weight: 300;
+  line-height: 1.2;
+  text-decoration: none;
+  display: flex;
+  position: relative;
+}
+.breadcrumbs div a:hover {
+  color: var(--redFillhover);
+}
+
+.breadcrumbs div span {
+  color: var(--redFillhover);
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none;
+  display: block;
+  position: relative;
+}

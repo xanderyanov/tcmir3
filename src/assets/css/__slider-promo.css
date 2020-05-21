@@ -1,0 +1,172 @@
+.promoBox__area {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0.625rem auto;
+}
+
+.promoBox {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.promoBox__big {
+  display: flex;
+  width: 70%;
+  padding-right: 1.25rem;
+}
+
+.promoBox__small {
+  display: flex;
+  width: 30%;
+  flex-wrap: wrap;
+  /* padding-left: 1.25rem; */
+}
+
+.promoBox__smallInner {
+  display: flex;
+  width: 100%;
+}
+
+.promoBox__smallInner_1 {
+  padding-bottom: 0.625rem;
+}
+
+.promoBox__smallInner_2 {
+  padding-top: 0.625rem;
+}
+
+.promoBox__smallInner img {
+  display: block;
+  width: 100%;
+}
+
+/* главный слайдер - начало */
+.mainSlider {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.swiper-container1 {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.swiper-slide1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.swiper__cadr {
+  width: 100%;
+  position: absolute;
+}
+
+.swiper-slide1 img {
+  display: block;
+  width: 100%;
+}
+
+.swiper__inner1 {
+  width: 100%;
+  display: block;
+  transition: all 0.5s;
+  padding-right: 60%;
+}
+
+.swiper__title1 {
+  color: #fff;
+  font-size: 2rem;
+  line-height: 1.2;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.swiper__text1 {
+  color: #fff;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.swiper__link1 {
+  margin-top: 1.875rem;
+  width: 14rem;
+  height: 3.5rem;
+  background: var(--redFill);
+  border-radius: 6px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.125rem;
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s;
+}
+
+.swiper__link1:hover {
+  background: var(--redFillhover);
+}
+
+.swiper-button-prev1,
+.swiper-button-next1 {
+  background: rgba(255, 255, 255, 0.8);
+  width: 56px;
+  height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  margin-top: -28px;
+  border-radius: 3px;
+}
+
+.swiper-button-prev1 i,
+.swiper-button-next1 i {
+  color: #000;
+  font-size: 1rem;
+}
+
+.swiper-button-prev1:hover,
+.swiper-button-next1:hover {
+  background: var(--redFill);
+}
+
+.swiper-button-prev1:hover i,
+.swiper-button-next1:hover i {
+  color: #fff;
+}
+
+.swiper-button-prev:after,
+.swiper-container-rtl .swiper-button-next:after {
+  display: none;
+}
+
+.swiper-button-next:after,
+.swiper-container-rtl .swiper-button-prev:after {
+  display: none;
+}
+
+.swiper-pagination1 {
+  bottom: 30px !important;
+}
+
+.swiper-pagination-bullet {
+  opacity: 1;
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  background-color: var(--redFill);
+}
+/* главный слайдер - конец */

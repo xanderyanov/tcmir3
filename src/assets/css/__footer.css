@@ -1,0 +1,146 @@
+.footer__area {
+  background: #e5e5e5;
+  padding: 70px 0;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.f1 {
+  order: 1;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+
+.f2 {
+  order: 2;
+  width: 20%;
+}
+
+.f3 {
+  order: 3;
+  width: 35%;
+}
+
+.f4 {
+  order: 4;
+  width: 15%;
+}
+
+.tm {
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.4;
+  color: rgba(65, 51, 40, 0.5);
+  margin-bottom: 1.25rem;
+}
+
+.oferta {
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.4;
+  color: rgba(65, 51, 40, 0.5);
+  margin-bottom: 1.25rem;
+}
+
+.policy1 {
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.4;
+  text-transform: capitalize;
+  color: #413328;
+  text-decoration: none;
+}
+
+.policy1:hover {
+  text-decoration: underline;
+}
+
+.footerMenu {
+  display: flex;
+  flex-direction: column;
+}
+
+.footerMenu li {
+  list-style: none;
+  margin-bottom: 0.5rem;
+}
+
+.footerMenu li a {
+  text-decoration: none;
+  color: var(--tColor);
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.25;
+  text-transform: capitalize;
+}
+
+.footerMenu li a:hover {
+  color: var(--redFill);
+}
+
+.footer__address {
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.25;
+  color: var(--tColor);
+  margin-bottom: 0.5rem;
+}
+
+.footerTime {
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.25;
+  color: var(--tColor);
+  margin-bottom: 2.5rem;
+}
+
+.footerPhone {
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.25;
+  color: var(--tColor);
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.footerPhone:hover {
+  text-decoration: underline;
+  color: var(--redFill);
+}
+
+.footer__linksTitle {
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.25;
+  color: rgba(65, 51, 40, 0.5);
+  margin-bottom: 1.5rem;
+}
+
+.footerSGlinks {
+  display: flex;
+  align-items: center;
+}
+
+.footerSGlinks a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  text-decoration: none;
+}
+
+.footerSGlinks a i {
+  font-size: 1rem;
+  color: rgba(13, 9, 9, 0.7);
+  transition: all 0.3s;
+}
+
+.footerSGlinks a:hover i {
+  color: var(--redFill);
+}
