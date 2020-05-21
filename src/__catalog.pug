@@ -1,4 +1,5 @@
 include assets/data/db
+include __catalogFilter1
 
 .catalogPage__outer.w0
   .catalogPage.w1
@@ -14,7 +15,7 @@ include assets/data/db
 
         //- each name in ['Главная', 'О компании', 'Услуги', 'Каталог', 'Контакты']
         //-   li
-        //-     a(href="#")= name
+        //-     a(href="#")= name 
 
     
     //- each val in db_array
@@ -25,6 +26,7 @@ include assets/data/db
 
 
     .catalog__outer
+      +catalogFilter1
       .catalog
         each val in db_array
           .tovarCard__area(id=val.id)
@@ -39,7 +41,8 @@ include assets/data/db
                   i.icon-favorit2.favOn
                 .tovarCard__imgBox
                   img.tovarCard__imgImg(src!=val.img, alt='')
-                .tovarCard__priceDiscount -50%
+                if val.discount
+                  .tovarCard__priceDiscount!=val.discount
                 img.tovarCard__imgCover(src='assets/img/bg34.png', alt='')
               form.tovarCard__info(action='#', metod='post')
                 .tovarCard__infoTop

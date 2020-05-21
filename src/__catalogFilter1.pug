@@ -1,0 +1,28 @@
+include __filter
+
+mixin catalogFilter1
+  .catalogFilter1__area
+    .catalogFilter1
+      .catalogFilter1__item
+        .catalogFilter1__itemTitle
+          span Материал
+        .catalogFilter1__itemContent
+          +filterCheckbox_material
+          
+      .catalogFilter1__item
+        .catalogFilter1__itemTitle
+          span Бренд
+        .catalogFilter1__itemContent
+          +filterCheckbox_brand
+      .catalogFilter1__item
+        .catalogFilter1__itemTitle
+          span Выбор цвета
+        .catalogFilter1__itemContent
+          +filterCheckbox_color
+      .catalogFilter1__item
+        .catalogFilter1__itemTitle
+          span Заголовок фильтра 2
+        .catalogFilter1__itemContent
+          p Контент в разработке
+
+    
