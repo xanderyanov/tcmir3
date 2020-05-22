@@ -1,3 +1,19 @@
+mixin filterSort
+  .filterBox.filterBox__sort
+    //- .filterBox__title Выбор материала:
+    .filterBox__content
+      a.filterSort__item(href="#")
+        |По популярности
+      a.filterSort__item(href="#")
+        |По убыванию цены
+      a.filterSort__item(href="#")
+        |По возрастанию цены
+      a.filterSort__item(href="#")
+        |По новинкам
+      a.filterSort__item(href="#")
+        |По скидкам
+
+
 mixin filterCheckbox_material
   .filterBox.filterBox__checkbox
     .filterBox__title Выбор материала:
@@ -23,6 +39,7 @@ mixin filterCheckbox_material
       .xcheckbox
         input#checkbox_7(type='checkbox', value='7')
         label(for='checkbox_7') Синтетическое волокно
+    .filter__checkboxReset Очистить выбор
     .filterEnterBtn
       span Применить
 
@@ -53,6 +70,7 @@ mixin filterCheckbox_brand
       .xcheckbox
         input#checkbox_77(type='checkbox', value='7')
         label(for='checkbox_77') Большевичка
+    .filter__checkboxReset Очистить выбор
     .filterEnterBtn
       span Применить
 

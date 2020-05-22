@@ -4,6 +4,11 @@ mixin catalogFilter1
   .catalogFilter1__area
     .catalogFilter1
       .catalogFilter1__item
+        .catalogFilter1__itemTitle.catalogFilter1__itemTitle_sort
+          span Сортировка
+        .catalogFilter1__itemContent.catalogFilter1__itemContent_sort
+          +filterSort
+      .catalogFilter1__item
         .catalogFilter1__itemTitle
           span Материал
         .catalogFilter1__itemContent
@@ -20,9 +25,8 @@ mixin catalogFilter1
         .catalogFilter1__itemContent
           +filterCheckbox_color
       .catalogFilter1__item
-        .catalogFilter1__itemTitle
-          span Заголовок фильтра 2
-        .catalogFilter1__itemContent
-          p Контент в разработке
+        .resetAllFiltersBtn
+          span Очистить фильтры
+
 
     

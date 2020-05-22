@@ -22,7 +22,6 @@ $(function () {
         init: function () {
           console.log("swiper initialized");
           $(".swiper-slide").children(".swiper__cadr").removeClass("bounceInRight").fadeOut(500);
-
           setTimeout(function () {
             $(".swiper-slide-active")
               .children(".swiper__cadr")
@@ -33,7 +32,6 @@ $(function () {
         },
         slideChange: function () {
           $(".swiper-slide").children(".swiper__cadr").removeClass("bounceInRight").fadeOut(500);
-
           setTimeout(function () {
             $(".swiper-slide-active")
               .children(".swiper__cadr")
@@ -98,6 +96,7 @@ $(function () {
     });
   }
 
+  //минус и плюс в количестве товара на одной карточке
   $(".minus").click(function () {
     var $input = $(this).parent().find("input");
     var count = parseInt($input.val()) - 1;
@@ -112,7 +111,7 @@ $(function () {
     $input.change();
     return false;
   });
-
+  //минус и плюс в количестве товара в таблице для одной строки
   $(".minus_tab").click(function () {
     var $input = $(this).parent().find("input");
     var count = parseInt($input.val()) - 1;
@@ -128,6 +127,8 @@ $(function () {
     return false;
   });
 
+  //Обертывание всех таблиц в блоке .content для правильного их поведения на адаптиве -
+  //дальше работает нужный стиль
   $(".content table").wrap('<div class="table_outer"></div>');
 
   // Скрипт добавления в избранное через localstorage
@@ -151,7 +152,6 @@ $(function () {
         .find(".tovarCard__fav")
         .children(".favOn")
         .show();
-
       $(".topFavBtn").addClass("favLinkReady");
     });
   } else {
@@ -160,7 +160,6 @@ $(function () {
   $(".tovarCard__fav").on("click", function (e) {
     e.preventDefault();
     var value = $(this).closest(".tovarCard__area").attr("id");
-
     if ($(this).hasClass("inFav")) {
       $(this).removeClass("inFav");
       $(this).children(".favOff").show();
@@ -176,14 +175,10 @@ $(function () {
       $(this).children(".favOn").show();
       favorites.push(value);
     }
-
     console.log(value);
     console.log(favorites);
-
     var serialFavorites = JSON.stringify(favorites);
-
     localStorage.setItem("myFavorites", serialFavorites);
-
     if (favorites.length) {
       $(".topFavBtn_notFav").hide();
       $(".topFavBtn_yesFav").css("display", "flex");
@@ -201,6 +196,7 @@ $(function () {
     $(location).attr("href", "http://mir.deltal.beget.tech/category.html/" + parameters);
   });
 
+  //Раскрытие фильтра в каталоге по клику на его заголовке
   $(".catalogFilter1__itemTitle").on("click", function () {
     var fCont = $(this).closest(".catalogFilter1__item").find(".catalogFilter1__itemContent");
     var fAll = $(this).closest(".catalogFilter1");
@@ -215,24 +211,7 @@ $(function () {
     }
   });
 
-  // if ($(".filterBox__checkbox").length) {
-  //   $(".filterEnterBtn").on("click", function () {
-  //     var filtrItemParent = $(this).closest(".filterBox");
-
-  //     if (filtrItemParent.find(".xcheckbox input").is(":checked")) {
-  //       console.log("Выбрано");
-  //       filtrItemParent.closest(".catalogFilter1__item").find(".catalogFilter1__itemTitle").addClass("active");
-  //       $(".catalogFilter1__itemContent").removeClass("visible");
-  //       $(".catalogFilter1__itemTitle").removeClass("open1");
-  //     } else {
-  //       console.log("не выбрано");
-  //       filtrItemParent.closest(".catalogFilter1__item").find(".catalogFilter1__itemTitle").removeClass("active");
-  //       $(".catalogFilter1__itemContent").removeClass("visible");
-  //       $(".catalogFilter1__itemTitle").removeClass("open1");
-  //     }
-  //   });
-  // }
-
+  //Применение выбранного фильтра - эффект изменения заголовка фильтра на темный при наличии выбраных пунктов внутри
   $(".filterEnterBtn").on("click", function () {
     var filtrItemParent = $(this).closest(".filterBox");
 
@@ -249,7 +228,30 @@ $(function () {
     }
   });
 
+  //скрипт визуального добавления атрибута checked для чекбокса обычного
+  if ($(".filterBox__checkbox").length) {
+    //сам выбор
+    $(".xcheckbox").click(function (e) {
+      e.preventDefault();
+      if ($(this).hasClass("checked")) {
+        $(this).removeClass("checked");
+        $(this).children("input").removeAttr("checked");
+      } else {
+        $(this).addClass("checked");
+        $(this).children("input").attr("checked", "checked");
+      }
+    });
+    //Кнопка сброса обычных чекбоксов (не цвета) внутри одного блока фильта
+    $(".filter__checkboxReset").click(function () {
+      console.log("сброс фильтров");
+      $(this).closest(".filterBox").find("input[type=checkbox]").removeAttr("checked");
+      $(this).closest(".filterBox").find(".xcheckbox").removeClass("checked");
+    });
+  }
+
+  //Выбор чекбоксов с цветами - применение эффекта по клику на пункт
   if ($(".filter__checkboxColor").length) {
+    //сам выбор
     $(".checkboxColor__item").click(function (e) {
       e.preventDefault();
       if ($(this).hasClass("checked")) {
@@ -264,6 +266,7 @@ $(function () {
         $(this).children("input").attr("checked", "checked");
       }
     });
+    //сброс выбора именно для чекбоксов с цветами
     $(".filter__checkboxColorReset").click(function (e) {
       console.log("сброс фильтров");
       e.preventDefault();
@@ -273,4 +276,37 @@ $(function () {
       $(this).closest(".filterBox").find(".checkboxColorTitle").removeClass("checkColor");
     });
   }
+
+  //Скрипт блока сортировки в фильтах
+  if ($(".filterBox__sort").length) {
+    $(".filterSort__item").click(function (e) {
+      e.preventDefault();
+      $(this).closest(".filterBox__content").find(".filterSort__item").removeClass("filterSort__item_active");
+      $(this).addClass("filterSort__item_active");
+      var activeSortName = $(this).text();
+      console.log(activeSortName);
+      $(".catalogFilter1__itemTitle_sort span").html(activeSortName);
+      $(this).closest(".catalogFilter1__item").find(".catalogFilter1__itemTitle").addClass("active");
+      $(".catalogFilter1__itemContent").removeClass("visible");
+      $(".catalogFilter1__itemTitle").removeClass("open1");
+    });
+  }
+
+  //Кнопка очистки всех фильтров
+  $(".resetAllFiltersBtn").click(function (e) {
+    e.preventDefault();
+    //сброс обычныч чекбоксов и закрытие раскрытых блоков
+    $(this).closest(".catalogFilter1").find("input[type=checkbox]").removeAttr("checked");
+    $(this).closest(".catalogFilter1").find(".xcheckbox").removeClass("checked");
+    $(this).closest(".catalogFilter1").find(".catalogFilter1__itemTitle").removeClass("active");
+    $(this).closest(".catalogFilter1").find(".catalogFilter1__itemContent").removeClass("visible");
+    $(this).closest(".catalogFilter1").find(".catalogFilter1__itemTitle").removeClass("open1");
+    //сброс чекбоксов с цветом
+    $(this).closest(".catalogFilter1").find(".checkboxColorTitle").removeClass("checkColor");
+    $(this).closest(".catalogFilter1").find(".checkboxColor__item").removeClass("checked");
+    $(this).closest(".catalogFilter1").find(".checkboxColorBox").removeClass("checked");
+    //сброс сортировки
+    $(this).closest(".catalogFilter1").find(".filterSort__item").removeClass("filterSort__item_active");
+    $(".catalogFilter1__itemTitle_sort span").html("Сортировка");
+  });
 });

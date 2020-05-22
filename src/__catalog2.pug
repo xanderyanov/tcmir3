@@ -1,0 +1,57 @@
+include assets/data/db
+include __catalogFilter1
+
+.catalogPage__outer.w0
+  .catalogPage.w1
+    nav.catalogMenu__outer
+      a.catalogMenuTopLink(href="#") Новинки
+      .catalogMenu__title Одежда
+      ul.catalogMenu
+        each val in db_catalogMenu
+          li
+            a(href="")
+              span!= val.title
+              span!= val.counter 
+
+        //- each name in ['Главная', 'О компании', 'Услуги', 'Каталог', 'Контакты']
+        //-   li
+        //-     a(href="#")= name 
+
+    
+    //- each val in db_array
+    //-   .array_item_block(id=val.id)
+    //-       .item_title!= val.title
+    //-       .item_content!= val.content
+
+
+
+    .catalog__outer
+      +catalogFilter1
+      .catalog
+        each val in db_array
+          .tovarCard__area(id=val.id)
+            .tovarCard
+              a.tovarCard__img(href='#')
+                .tovarCard__fav
+                  i.icon-favorit1.favOff
+                  i.icon-favorit2.favOn
+                .tovarCard__imgBox
+                  img.tovarCard__imgImg(src!=val.img, alt='')
+                if val.discount
+                  .tovarCard__priceDiscount!=val.discount
+              form.tovarCard__info(action='#', metod='post')
+                .tovarCard__infoTop
+                  .tovarCard__priceArea
+                    .tovarCard__priceOld!= val.oldPrice
+                      span ₽
+                    .tovarCard__price!= val.price
+                      span ₽
+                  .tovarCard__action
+                    button.tovarCard__call
+                      i.icon-phone1
+                    button.tovarCard__buy
+                      i.icon-cart1
+                a.tovarCard__infoTitle(href='')!= val.title
+                
+
+      

@@ -253,6 +253,23 @@
   background: var(--x1greyLight);
 }
 
+.filter__checkboxReset {
+  padding: 0.3125rem 0.625rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--x1greySuperLight);
+  border-radius: 4px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 0.875rem;
+  transition: all 0.2s;
+  margin-bottom: 0.625rem;
+}
+.filter__checkboxReset:hover {
+  background: var(--x1greyLight);
+}
+
 .checkboxColorTitle {
   font-size: 0.75rem;
   color: var(--tColor);
@@ -261,4 +278,63 @@
 
 .checkColor {
   color: var(--redFill);
+}
+
+.filterSort__item {
+  display: flex;
+  margin-bottom: 0.5rem;
+  white-space: nowrap;
+  font-size: 0.75rem;
+  text-decoration: none;
+  color: var(--tColor);
+  transition: all 0.2s;
+  position: relative;
+  padding: 0 0 0 1rem;
+}
+.filterSort__item_active {
+  color: var(--redFill);
+}
+.filterSort__item:before {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 6px;
+  border-left: 2px solid;
+  border-bottom: 2px solid;
+  transform: rotate(-45deg);
+  position: absolute;
+  left: 3px;
+  top: 5px;
+  color: var(--redFill);
+  display: none;
+}
+.filterSort__item_active:before {
+  display: block;
+}
+
+.filterSort__item:hover {
+  color: var(--redFill);
+}
+
+.catalogFilter1__itemTitle_sort {
+  background: var(--x1greySuperLight);
+}
+
+.active.catalogFilter1__itemTitle_sort {
+  background: var(--x1greyDark);
+}
+
+.resetAllFiltersBtn {
+  padding: 0.3125rem 0.625rem;
+  border-radius: 5px;
+  position: relative;
+  cursor: pointer;
+  background: var(--colorLightGrey);
+}
+.resetAllFiltersBtn:hover {
+  background: var(--x1greySuperLight);
+}
+
+.resetAllFiltersBtn span {
+  font-size: 0.875rem;
 }
