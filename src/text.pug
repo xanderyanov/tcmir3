@@ -1,6 +1,7 @@
-- var pageTitle = 'Главная страница'
+- var pageTitle = 'Текстовая страница'
 
 include __header
+include __textInContent
 
 <!DOCTYPE html>
 html(lang="ru-RU")
@@ -11,7 +12,9 @@ body
 	+header
 
 .site__center
-	include __slider-promo
+	include __breadcrumbs
+	+textInContent
+
 
 .site__footer
 	include __footer

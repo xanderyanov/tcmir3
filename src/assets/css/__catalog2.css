@@ -47,6 +47,9 @@
 .catalogMenu li:hover {
   background: var(--x1greyLight);
 }
+.catalogMenu li.active {
+  background: var(--x1greyLight);
+}
 
 .catalogMenu li a {
   text-decoration: none;
@@ -69,6 +72,13 @@
   color: #fff;
 }
 .catalogMenu li:hover a span {
+  color: #fff;
+}
+
+.catalogMenu li.active a {
+  color: #fff;
+}
+.catalogMenu li.active a span {
   color: #fff;
 }
 

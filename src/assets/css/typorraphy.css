@@ -83,13 +83,17 @@ a {
 }
 
 .content blockquote {
-  color: #fff;
+  color: #000;
   padding: 10px 20px;
-  background: var(--redFill);
+  background: var(--x1greySuperLight);
+  line-height: 1.5;
+  font-style: italic;
 }
 
 .content blockquote p {
-  color: #fff;
+  color: #000;
+  line-height: 1.5;
+  font-style: italic;
 }
 
 .content a {
@@ -153,7 +157,7 @@ a {
 .content table th,
 .content table td {
   padding: 10px;
-  border: 1px solid var(--redFill);
+  border: 1px solid var(--x1grey);
 }
 
 table.clear {

@@ -1,17 +1,21 @@
 - var pageTitle = 'Страница товара'
 
+include __header
+include __textInContent
+
 <!DOCTYPE html>
 html(lang="ru-RU")
 	include __head
 body
 
 .site__header
-	include __header
+	+header
 
 .site__center
 	include __breadcrumbs
 
 	include __tovar
+	+textInContent
 
 
 .site__footer

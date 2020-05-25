@@ -94,10 +94,11 @@
 
 .tovarDescTab__area table tr:nth-child(odd) td {
   background: var(--colorLightGrey);
+  font-size: 0.75rem;
 }
 
 .tovarDescTab__area table tr:first-child td {
-  background: var(--redFill);
+  background: var(--x1greyLight);
   color: #fff;
 }
 
@@ -250,7 +251,7 @@
 
 .addToCartTab {
   width: 100%;
-  margin-bottom: 1.875rem;
+  /* margin-bottom: 1.875rem; */
 }
 
 .addToCartTab table {
@@ -267,7 +268,7 @@
 
 .addToCartTab table tr th {
   /* background: var(--colorGrey); */
-  background: var(--redFill);
+  background: var(--x1greyLight);
   padding: 0.3125rem;
   text-align: center;
   font-size: 1rem;

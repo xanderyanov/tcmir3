@@ -1,0 +1,132 @@
+@media only screen and (max-width: 1280px) {
+  .x1menu li a {
+    font-size: 1rem;
+    padding: 0.3125rem;
+  }
+}
+
+@media only screen and (max-width: 1140px) {
+}
+
+@media only screen and (max-width: 1080px) {
+  .topLine__item3 span {
+    display: none;
+  }
+  .topLine__item3 i {
+    margin: 0;
+  }
+  .topLine__item3 {
+    margin: 0 20px 0 0;
+  }
+  .x1menu {
+    display: none;
+  }
+  .topMenu__wrapper {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 920px) {
+}
+
+@media only screen and (max-width: 800px) {
+}
+
+@media only screen and (max-width: 768px) {
+  .topLine__item1 {
+    display: none;
+  }
+  .greyRound {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+  .topFavBtn {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+  .topFavBtn i {
+    font-size: 1.125rem;
+  }
+  .miniCart__link {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+  .miniCart__link i {
+    font-size: 1.125rem;
+  }
+  .miniCart__link span {
+    border: 1px solid #fff;
+    font-weight: 400;
+    font-size: 0.75rem;
+    width: 30px;
+    height: 20px;
+    top: -5px;
+  }
+  .logo1__area {
+    display: flex;
+    justify-content: center;
+    padding: 0.3125rem 0;
+  }
+  .aH__iconLink {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+
+  .aH__iconLink i {
+    font-size: 1rem;
+  }
+  .header__action {
+    width: auto;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .header {
+    display: none;
+  }
+  .adaptiveHeader {
+    display: flex;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .aH__logo {
+    display: none;
+  }
+  .aH__iconLink {
+    height: 2rem;
+    width: 2rem;
+  }
+
+  .aH__iconLink i {
+    font-size: 0.875rem;
+  }
+  .topFavBtn {
+    height: 2rem;
+    width: 2rem;
+  }
+  .topFavBtn i {
+    font-size: 1rem;
+  }
+  .miniCart__link {
+    height: 2rem;
+    width: 2rem;
+  }
+  .miniCart__link i {
+    font-size: 1rem;
+  }
+  .miniCart__link span {
+    font-size: 0.75rem;
+    width: 30px;
+    height: 20px;
+    top: -5px;
+    left: 22px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+}
+
+@media only screen and (max-width: 320px) {
+}

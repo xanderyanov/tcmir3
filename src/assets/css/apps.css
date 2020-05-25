@@ -11,7 +11,10 @@
 @import "typorraphy.css";
 
 @import "xandercode.css";
+
 @import "__header.css";
+@import "__header-media.css";
+
 @import "__slider-promo.css";
 @import "__footer.css";
 @import "__breadcrumbs.css";
@@ -20,4 +23,13 @@
 @import "__filter.css";
 @import "__slider-tovar.css";
 @import "__tovar.css";
+@import "__content.css";
+
+@import "__top-search.css";
+@import "__top-search-media.css";
+
+@import "__adaptive-menu.css";
+@import "__adaptive-menu-media.css";
+
 @import "main.css";
+@import "media.css";
