@@ -18,7 +18,10 @@
 @import "__slider-promo.css";
 @import "__footer.css";
 @import "__breadcrumbs.css";
-@import "__catalog2.css";
+
+@import "__catalog4.css";
+@import "__catalog4-media.css";
+
 @import "__catalogFilter1.css";
 @import "__filter.css";
 @import "__slider-tovar.css";

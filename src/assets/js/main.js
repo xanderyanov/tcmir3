@@ -231,17 +231,17 @@ $(function () {
   //скрипт визуального добавления атрибута checked для чекбокса обычного
   if ($(".filterBox__checkbox").length) {
     //сам выбор
-    $(".xcheckbox").click(function (e) {
-      e.preventDefault();
-      if ($(this).hasClass("checked")) {
-        $(this).removeClass("checked");
-        $(this).children("input").removeAttr("checked");
-      } else {
-        $(this).addClass("checked");
-        $(this).children("input").attr("checked", "checked");
-      }
-    });
-    //Кнопка сброса обычных чекбоксов (не цвета) внутри одного блока фильта
+    // $(".xcheckbox").click(function (e) {
+    //   e.preventDefault();
+    //   if ($(this).hasClass("checked")) {
+    //     $(this).removeClass("checked");
+    //     $(this).children("input").removeAttr("checked");
+    //   } else {
+    //     $(this).addClass("checked");
+    //     $(this).children("input").attr("checked", "checked");
+    //   }
+    // });
+    //Кнопка сброса обычных чекбоксов (не цвета) внутри одного блока фильта *найти  checked  false
     $(".filter__checkboxReset").click(function () {
       console.log("сброс фильтров");
       $(this).closest(".filterBox").find("input[type=checkbox]").removeAttr("checked");

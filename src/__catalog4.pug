@@ -104,41 +104,39 @@ include __catalogFilter1
       .catalog
         each val in db_array
           .tovarCard__area(id=val.id)
-            .tovarCard
-              a.tovarCard__img(href='#')
-                .tovarCard__fav
-                  i.icon-favorit1.favOff
-                  i.icon-favorit2.favOn
-                .tovarCard__imgBox
+            .tovarCard__areaborder
+              a.tovarCard(href='#')
+                //- .tovarCard__imgOuter
+                .tovarCard__img
+                  .tovarCard__fav
+                    i.icon-favorit1.favOff
+                    i.icon-favorit2.favOn
+                  //- .tovarCard__imgBox
                   img.tovarCard__imgImg(src!=val.img, alt='')
-                if val.discount
-                  .tovarCard__priceDiscount!=val.discount
-              form.tovarCard__info(action='#', metod='post')
-                .tovarCard__infoTop
-                  .tovarCard__priceArea
-                    if val.oldPrice
-                      .tovarCard__priceOld!= val.oldPrice
-                        span ₽
-                      .tovarCard__price.tovarCard__price_red!= val.price
-                        span ₽
-                    else
-                      .tovarCard__price!= val.price
-                        span ₽
-                  //- .tovarCard__action
-                  //-   button.tovarCard__call
-                  //-     i.icon-phone1
-                  //-   button.tovarCard__buy
-                  //-     i.icon-cart1
-                a.tovarCard__infoTitle(href='')
-                  span!= val.content
-                  span.tovarCard__infoTitleSlash /
-                  span!= val.title
-            .tovarCard__moreArea
-              .tovarCard__more
-                .tovarCard__moreInfo
-                  span размеры: 
-                  span S, L, XL, XXL
-                a.tovarCard__moreInfoLink(href="#") Подробнее...
+                  if val.discount
+                    .tovarCard__priceDiscount!=val.discount
+                .tovarCard__info
+                  .tovarCard__infoTop
+                    .tovarCard__priceArea
+                      if val.oldPrice
+                        .tovarCard__priceOld!= val.oldPrice
+                          span ₽
+                        .tovarCard__price.tovarCard__price_red!= val.price
+                          span ₽
+                      else
+                        .tovarCard__price!= val.price
+                          span ₽
+                  .tovarCard__infoTitle
+                    span!= val.content
+                    span.tovarCard__infoTitleSlash /
+                    span!= val.title
+              .tovarCard__wrapper
+                .tovarCard__moreArea
+                  .tovarCard__more
+                    .tovarCard__moreInfo
+                      span Размеры: 
+                      span S, L, XL, XXL
+                    .tovarCard__moreInfoLink Подробнее...
                 
 
       

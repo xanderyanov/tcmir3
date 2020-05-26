@@ -76,8 +76,8 @@
     font-size: 1rem;
   }
   .header__action {
-    width: auto;
-    justify-content: center;
+    /* width: auto; */
+    justify-content: flex-end;
   }
 }
 
@@ -87,6 +87,10 @@
   }
   .adaptiveHeader {
     display: flex;
+  }
+  .header__action {
+    width: auto;
+    /* justify-content: flex-end; */
   }
 }
 

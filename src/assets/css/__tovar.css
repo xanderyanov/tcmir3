@@ -62,6 +62,45 @@
   margin-bottom: 1.25rem;
 }
 
+.tovarCard__icons {
+  /* position: absolute;
+  left: 0;
+  top: 0; */
+  display: flex;
+}
+
+.tovarCard__icons_inPage {
+  position: relative;
+  justify-content: flex-end;
+  margin-bottom: 1.25rem;
+}
+
+.tovarCard__icon {
+  height: 3.25rem;
+  width: 3.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 0.25rem;
+  font-size: 1rem;
+  color: #fff;
+  font-weight: bold;
+  line-height: 1.1;
+  z-index: 50;
+}
+
+.tovarCard__icon_sale {
+  background: var(--redFill);
+}
+
+.tovarCard__icon_new {
+  background: #60b9a9;
+}
+
+.tovarCard__icon_hit {
+  background: #7b539a;
+}
+
 .tovarPage__descTitle {
   font-size: 1rem;
   color: var(--colorDarkGrey);
@@ -94,7 +133,7 @@
 
 .tovarDescTab__area table tr:nth-child(odd) td {
   background: var(--colorLightGrey);
-  font-size: 0.75rem;
+  /* font-size: 0.75rem; */
 }
 
 .tovarDescTab__area table tr:first-child td {
@@ -116,11 +155,12 @@
   font-size: 0.875rem;
   font-style: italic;
   color: #a6a6a6;
+  margin-right: 0.3125rem;
 }
 
 .tovar__price {
   color: var(--redFillhover);
-  font-size: 1.875rem;
+  font-size: 1.25rem;
   font-weight: 400;
   line-height: 1.2;
 }

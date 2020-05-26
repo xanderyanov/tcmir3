@@ -1,0 +1,103 @@
+@media only screen and (max-width: 1280px) {
+}
+
+@media only screen and (max-width: 1140px) {
+}
+
+@media only screen and (max-width: 1080px) {
+  .catalogMenu__outer {
+    width: 25%;
+  }
+  .tovarCard__area {
+    width: 33.333%;
+  }
+}
+
+@media only screen and (max-width: 920px) {
+}
+
+@media only screen and (max-width: 800px) {
+}
+
+@media only screen and (max-width: 768px) {
+  .catalogMenu__outer {
+    display: none;
+  }
+  .catalog__outer {
+    width: 100%;
+  }
+  .tovarCard__area:hover {
+    z-index: 1;
+  }
+  .tovarCard__areaborder {
+    border: 1px solid var(--x1border);
+  }
+  .tovarCard {
+    /* border: none; */
+    border: 1px solid transparent;
+    height: auto;
+  }
+  .tovarCard__wrapper {
+    display: block;
+    position: relative;
+    border: 1px solid transparent;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0);
+    /* box-shadow: 0 4px 3px rgba(0, 0, 0, 0.5); */
+    /* display: none; */
+    z-index: 5;
+  }
+  .tovarCard__moreArea {
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    z-index: 1;
+    position: relative;
+    background: #fff;
+    box-shadow: 0 4px 3px rgba(0, 0, 0, 0);
+  }
+  .tovarCard__more {
+    left: 0;
+    padding: 0 15px 10px;
+    /* border: 1px solid var(--x1border); */
+    border: 1px solid transparent;
+    border-top: none;
+    background: #fff;
+    width: 100%;
+    /* box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3); */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .tovarCard__area {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .catalog {
+    justify-content: center;
+  }
+  .tovarCard__area {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .tovarCard__area {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .tovarCard__area {
+    width: 100%;
+  }
+}

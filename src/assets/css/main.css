@@ -1,3 +1,26 @@
+html,
+body {
+  color: #000;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.1rem;
+  position: relative;
+  height: 100%;
+}
+
+.site__header {
+  position: relative;
+}
+
+.site__center {
+  position: relative;
+}
+
+.site__footer {
+  position: relative;
+}
+
 .xBlock__area {
   padding: 1.25rem 0;
 }
