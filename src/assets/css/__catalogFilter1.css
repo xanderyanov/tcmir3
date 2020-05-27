@@ -1,6 +1,7 @@
 .catalogFilter1__area {
   width: 100%;
   position: relative;
+  z-index: 4000;
 }
 
 .catalogFilter1 {

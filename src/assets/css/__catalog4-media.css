@@ -5,11 +5,14 @@
 }
 
 @media only screen and (max-width: 1080px) {
+}
+
+@media only screen and (max-width: 1024px) {
   .catalogMenu__outer {
-    width: 25%;
+    display: none;
   }
-  .tovarCard__area {
-    width: 33.333%;
+  .catalog__outer {
+    width: 100%;
   }
 }
 
@@ -20,11 +23,8 @@
 }
 
 @media only screen and (max-width: 768px) {
-  .catalogMenu__outer {
-    display: none;
-  }
-  .catalog__outer {
-    width: 100%;
+  .tovarCard__area {
+    width: 33.333%;
   }
   .tovarCard__area:hover {
     z-index: 1;
@@ -36,6 +36,7 @@
     /* border: none; */
     border: 1px solid transparent;
     height: auto;
+    padding: 10px 10px 0;
   }
   .tovarCard__wrapper {
     display: block;
@@ -46,8 +47,6 @@
     bottom: auto;
     left: auto;
     box-shadow: 0 3px 4px rgba(0, 0, 0, 0);
-    /* box-shadow: 0 4px 3px rgba(0, 0, 0, 0.5); */
-    /* display: none; */
     z-index: 5;
   }
   .tovarCard__moreArea {
@@ -62,13 +61,11 @@
   }
   .tovarCard__more {
     left: 0;
-    padding: 0 15px 10px;
-    /* border: 1px solid var(--x1border); */
+    padding: 0 10px 10px;
     border: 1px solid transparent;
     border-top: none;
     background: #fff;
     width: 100%;
-    /* box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3); */
     display: flex;
     flex-direction: column;
     position: relative;

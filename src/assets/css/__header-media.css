@@ -9,6 +9,9 @@
 }
 
 @media only screen and (max-width: 1080px) {
+}
+
+@media only screen and (max-width: 1024px) {
   .topLine__item3 span {
     display: none;
   }

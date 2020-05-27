@@ -5,6 +5,9 @@
 }
 
 @media only screen and (max-width: 1080px) {
+}
+
+@media only screen and (max-width: 1024px) {
   .topSearch__area {
     width: 100%;
   }

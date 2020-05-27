@@ -24,3 +24,13 @@ body {
 .xBlock__area {
   padding: 1.25rem 0;
 }
+
+.title1 {
+  margin-top: 10px;
+}
+
+.title1 h1,
+.title1 h2,
+.title1 h3 {
+  margin: 0;
+}

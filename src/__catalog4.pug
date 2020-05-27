@@ -2,76 +2,171 @@ include assets/data/db
 include __catalogFilter1
 
 .catalogPage__outer.w0
+  .title1.w1
+    h1 Заголовок страницы
   .catalogPage.w1
     nav.catalogMenu__outer
-      a.catalogMenuTopLink(href="#") Новинки
-      .catalogMenu__title Одежда
+      //- a.catalogMenuTopLink(href="#") Новинки
+      //- .catalogMenu__title Одежда
       
-      ul.catalogMenu
-        li.indent0(style='font-weight: 700;')
-          a(href='/ru/P/5ec630b97ef1530ad0c6c924?fl=5eb26bb4bca593111756fa18,5eb24861bca593111756f981,5ec3c68d09cd42185d335608&f=')
+      ul.catalogMenu.ullevel1
+        li.level1.indent1.fw700
+          a(href='#')
             span верхняя одежда
             span 15
-        li.indent1(style='font-weight: 400;')
-          a(href='/ru/P/5ec630b97ef1530ad0c6c924?fl=5eb26bb4bca593111756fa18&f=')
-            span ветровка
-            span 0
-        li.indent1(style='font-weight: 400;')
-          a(href='/ru/P/5ec630b97ef1530ad0c6c924?fl=5eb24861bca593111756f981&f=')
-            span куртка
-            span 1
-        li.indent1(style='font-weight: 400;')
-          a(href='/ru/P/5ec630b97ef1530ad0c6c924?fl=5ec3c68d09cd42185d335608&f=')
-            span пальто
-            span 14
-        li.indent0(style='font-weight: 700;')
-          a(href='/ru/P/5ec630b97ef1530ad0c6c924?fl=5ec3dcff09cd42185d335622,5eb2778abca593111756fa51,5ec3daea09cd42185d33561f,5eb2bd63e72fe108d093eeab,5eb400258474a1142d79d3e6&f=')
-            span верх
-            span 14
-        li.indent1(style='font-weight: 400;')
-          a(href='/ru/P/5ec630b97ef1530ad0c6c924?fl=5ec3dcff09cd42185d335622&f=')
-            span блузка
-            span 2
-        li.indent1(style='font-weight: 400;')
-          a(href='/ru/P/5ec630b97ef1530ad0c6c924?fl=5eb2778abca593111756fa51&f=')
-            span джемпер
-            span 6
-        li.indent1(style='font-weight: 400;')
-          a(href='/ru/P/5ec630b97ef1530ad0c6c924?fl=5ec3daea09cd42185d33561f&f=')
-            span жакет
-            span 3
-        li.indent1(style='font-weight: 400;')
-          a(href='/ru/P/5ec630b97ef1530ad0c6c924?fl=5eb2bd63e72fe108d093eeab&f=')
-            span жилет
-            span 2
-        li.indent1(style='font-weight: 400;')
-          a(href='/ru/P/5ec630b97ef1530ad0c6c924?fl=5eb400258474a1142d79d3e6&f=')
-            span кардиган
-            span 1
-        li.indent0(style='font-weight: 700;')
-          a(href='/ru/P/5ec630b97ef1530ad0c6c924?fl=5eb246c3bca593111756f978,5eb24700bca593111756f979,5eb535018474a1142d79d518,5eb53b428474a1142d79d522,5eb25e8bbca593111756f9f8&f=')
-            span штаны
-            span 18
-        li.indent1(style='font-weight: 400;')
-          a(href='/ru/P/5ec630b97ef1530ad0c6c924?fl=5eb246c3bca593111756f978&f=')
-            span брюки
-            span 16
-        li.indent1(style='font-weight: 400;')
-          a(href='/ru/P/5ec630b97ef1530ad0c6c924?fl=5eb24700bca593111756f979&f=')
-            span джинсы
-            span 0
-        li.indent1(style='font-weight: 400;')
-          a(href='/ru/P/5ec630b97ef1530ad0c6c924?fl=5eb535018474a1142d79d518&f=')
-            span леггинсы
-            span 0
-        li.indent1(style='font-weight: 400;')
-          a(href='/ru/P/5ec630b97ef1530ad0c6c924?fl=5eb53b428474a1142d79d522&f=')
-            span лосины
-            span 0
-        li.indent1.active(style='font-weight: 400;')
-          a(href='/ru/P/5ec630b97ef1530ad0c6c924?fl=5eb25e8bbca593111756f9f8&f=')
-            span шорты
-            span 2
+          ul.ullevel2
+            li.level2.indent2.fw400
+              a(href='#')
+                span ветровка
+                span 0
+            li.level2.indent2.fw400
+              a(href='#')
+                span куртка
+                span 1
+            li.level2.indent2.fw600.active
+              a(href='#')
+                span пальто
+                span 14
+              ul.ullevel3
+                li.level3.indent3.fw400
+                  a(href='#')
+                    span Короткое пальто
+                    span 0
+                li.level3.indent3.fw600
+                  a(href='#')
+                    span Длинное пальто
+                    span 1
+                  ul.ullevel4
+                    li.level4.indent4.fw400
+                      a(href='#')
+                        span Длинное кожаное пальто
+                        span 0
+                    li.level4.indent4.fw400
+                      a(href='#')
+                        span Длинное замшевое пальто
+                        span 1
+                    li.level4.indent4.fw400
+                      a(href='#')
+                        span Длинное драповое пальто
+                        span 14
+                      ul.ullevel5
+                        li.level5.indent5.fw400
+                          a(href='#')
+                            span Длинное драповое пальто Российское
+                            span 0
+                        li.level5.indent5.fw400
+                          a(href='#')
+                            span Длинное драповое пальто Испанское
+                            span 1
+                        li.level5.indent5.fw400
+                          a(href='#')
+                            span Длинное драповое пальто Китайское
+                            span 14
+                    li.level4.indent4.fw400
+                      a(href='#')
+                        span Длинное льняное пальто
+                        span 0
+                    li.level4.indent4.fw400
+                      a(href='#')
+                        span Длинное шелковое пальто
+                        span 1
+                li.level3.indent3.fw400
+                  a(href='#')
+                    span Летнее полупальто
+                    span 14
+                li.level3.indent3.fw400
+                  a(href='#')
+                    span Полупальто
+                    span 14
+                li.level3.indent3.fw400
+                  a(href='#')
+                    span Зимнее пальто
+                    span 0
+                li.level3.indent3.fw400
+                  a(href='#')
+                    span Летнее пальто
+                    span 1
+                li.level3.indent3.fw400
+                  a(href='#')
+                    span Летнее полупальто
+                    span 14
+
+
+
+
+
+
+
+
+
+
+
+
+      //- ul.catalogMenu
+      //-   li.indent0(style='font-weight: 700;')
+      //-     a(href='/ru/P/5ec630b97ef1530ad0c6c924?fl=5eb26bb4bca593111756fa18,5eb24861bca593111756f981,5ec3c68d09cd42185d335608&f=')
+      //-       span верхняя одежда
+      //-       span 15
+      //-   li.indent1(style='font-weight: 400;')
+      //-     a(href='/ru/P/5ec630b97ef1530ad0c6c924?fl=5eb26bb4bca593111756fa18&f=')
+      //-       span ветровка
+      //-       span 0
+      //-   li.indent1(style='font-weight: 400;')
+      //-     a(href='/ru/P/5ec630b97ef1530ad0c6c924?fl=5eb24861bca593111756f981&f=')
+      //-       span куртка
+      //-       span 1
+      //-   li.indent1(style='font-weight: 400;')
+      //-     a(href='/ru/P/5ec630b97ef1530ad0c6c924?fl=5ec3c68d09cd42185d335608&f=')
+      //-       span пальто
+      //-       span 14
+      //-   li.indent0(style='font-weight: 700;')
+      //-     a(href='/ru/P/5ec630b97ef1530ad0c6c924?fl=5ec3dcff09cd42185d335622,5eb2778abca593111756fa51,5ec3daea09cd42185d33561f,5eb2bd63e72fe108d093eeab,5eb400258474a1142d79d3e6&f=')
+      //-       span верх
+      //-       span 14
+      //-   li.indent1(style='font-weight: 400;')
+      //-     a(href='/ru/P/5ec630b97ef1530ad0c6c924?fl=5ec3dcff09cd42185d335622&f=')
+      //-       span блузка
+      //-       span 2
+      //-   li.indent1(style='font-weight: 400;')
+      //-     a(href='/ru/P/5ec630b97ef1530ad0c6c924?fl=5eb2778abca593111756fa51&f=')
+      //-       span джемпер
+      //-       span 6
+      //-   li.indent1(style='font-weight: 400;')
+      //-     a(href='/ru/P/5ec630b97ef1530ad0c6c924?fl=5ec3daea09cd42185d33561f&f=')
+      //-       span жакет
+      //-       span 3
+      //-   li.indent1(style='font-weight: 400;')
+      //-     a(href='/ru/P/5ec630b97ef1530ad0c6c924?fl=5eb2bd63e72fe108d093eeab&f=')
+      //-       span жилет
+      //-       span 2
+      //-   li.indent1(style='font-weight: 400;')
+      //-     a(href='/ru/P/5ec630b97ef1530ad0c6c924?fl=5eb400258474a1142d79d3e6&f=')
+      //-       span кардиган
+      //-       span 1
+      //-   li.indent0(style='font-weight: 700;')
+      //-     a(href='/ru/P/5ec630b97ef1530ad0c6c924?fl=5eb246c3bca593111756f978,5eb24700bca593111756f979,5eb535018474a1142d79d518,5eb53b428474a1142d79d522,5eb25e8bbca593111756f9f8&f=')
+      //-       span штаны
+      //-       span 18
+      //-   li.indent1(style='font-weight: 400;')
+      //-     a(href='/ru/P/5ec630b97ef1530ad0c6c924?fl=5eb246c3bca593111756f978&f=')
+      //-       span брюки
+      //-       span 16
+      //-   li.indent1(style='font-weight: 400;')
+      //-     a(href='/ru/P/5ec630b97ef1530ad0c6c924?fl=5eb24700bca593111756f979&f=')
+      //-       span джинсы
+      //-       span 0
+      //-   li.indent1(style='font-weight: 400;')
+      //-     a(href='/ru/P/5ec630b97ef1530ad0c6c924?fl=5eb535018474a1142d79d518&f=')
+      //-       span леггинсы
+      //-       span 0
+      //-   li.indent1(style='font-weight: 400;')
+      //-     a(href='/ru/P/5ec630b97ef1530ad0c6c924?fl=5eb53b428474a1142d79d522&f=')
+      //-       span лосины
+      //-       span 0
+      //-   li.indent1.active(style='font-weight: 400;')
+      //-     a(href='/ru/P/5ec630b97ef1530ad0c6c924?fl=5eb25e8bbca593111756f9f8&f=')
+      //-       span шорты
+      //-       span 2
       
       
       

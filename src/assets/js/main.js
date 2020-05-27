@@ -1,4 +1,63 @@
 $(function () {
+  // Открытие и закрытие адаптивного меню по кнопке
+  $(".menuButton1__areaJS").click(function (e) {
+    e.preventDefault();
+    if ($(this).hasClass("open")) {
+      $(this).removeClass("open");
+      $(".menuButton1").removeClass("open");
+      $(".adaptiveMenu__areaJS").slideUp(200);
+    } else {
+      $(this).addClass("open");
+      $(".menuButton1").addClass("open");
+      $(".adaptiveMenu__areaJS").slideDown(200);
+      var adaptiveMenu__titleH = $(".adaptiveMenu__title").outerHeight();
+      console.log("adaptiveMenu__titleH " + adaptiveMenu__titleH);
+      // Код выше показывает высоту заголовка адаптивного меню -
+      // и задает отступ пунктов - код ниже
+      $(".adaptiveMenu__wrapper").css({ paddingTop: adaptiveMenu__titleH });
+    }
+  });
+  // Закрытие адаптивного меню по кнопке Close
+  $(".adaptiveMenu__areaClose").click(function () {
+    $(".menuButton1__areaJS").removeClass("open");
+    $(".menuButton1").removeClass("open");
+    $(".adaptiveMenu__areaJS").slideUp(200);
+  });
+
+  // создание блока заголовка дочернего меню и кнопки назад
+  $(".adaptiveMenu li:has(ul)").addClass("hasInner");
+  $(".adaptiveMenu li.hasInner").each(function () {
+    // var liTitle = $(this).children("a").text();
+    var liTitle1 = $(this).children("a").children("span:first-child").text();
+    var liTitle2 = $(this).children("a").children("span:last-child").text();
+    var liTitle = liTitle1 + " " + liTitle2;
+    $(this)
+      .children("ul")
+      .prepend(
+        "<div class='adaptiveMenuUlTitle'><span>" +
+          liTitle +
+          "</span><div class='adaptiveMenuUlTitleBack'>Назад</div></div>"
+      );
+  });
+
+  var x = 0;
+  $(".adaptiveMenu li.hasInner > a").click(function (e) {
+    e.preventDefault();
+    // $(this).addClass("active");
+    console.log(x);
+    x = x - 100;
+    console.log(x);
+    $(".adaptiveMenu").animate({ left: x + "%" }, 300);
+  });
+
+  $(".adaptiveMenuUlTitleBack").click(function (e) {
+    e.preventDefault();
+    console.log("клик назад ");
+    x = x + 100;
+    console.log(x);
+    $(".adaptiveMenu").animate({ left: x + "%" }, 300);
+  });
+
   // главный слайдер на главной
   if ($(".swiper-container1").length) {
     var mySwiper1 = new Swiper(".swiper-container1", {
@@ -127,6 +186,8 @@ $(function () {
     return false;
   });
 
+  $(".catalogMenu li:has(ul)").addClass("fw600");
+
   //Обертывание всех таблиц в блоке .content для правильного их поведения на адаптиве -
   //дальше работает нужный стиль
   $(".content table").wrap('<div class="table_outer"></div>');
@@ -212,6 +273,23 @@ $(function () {
   });
 
   //Применение выбранного фильтра - эффект изменения заголовка фильтра на темный при наличии выбраных пунктов внутри
+  // $(".filterEnterBtn").on("click", function () {
+  //   var filtrItemParent = $(this).closest(".filterBox");
+
+  //   if (filtrItemParent.find("input").is(":checked")) {
+  //     console.log("Выбрано");
+  //     filtrItemParent.closest(".catalogFilter1__item").find(".catalogFilter1__itemTitle").addClass("active");
+  //     $(".catalogFilter1__itemContent").removeClass("visible");
+  //     $(".catalogFilter1__itemTitle").removeClass("open1");
+  //   } else {
+  //     console.log("не выбрано");
+  //     filtrItemParent.closest(".catalogFilter1__item").find(".catalogFilter1__itemTitle").removeClass("active");
+  //     $(".catalogFilter1__itemContent").removeClass("visible");
+  //     $(".catalogFilter1__itemTitle").removeClass("open1");
+  //   }
+  // });
+  // Работающий по старому - выше
+
   $(".filterEnterBtn").on("click", function () {
     var filtrItemParent = $(this).closest(".filterBox");
 
