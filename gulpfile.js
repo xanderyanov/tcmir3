@@ -16,16 +16,33 @@ var path = require("path");
 var plumber = require("gulp-plumber");
 var postcss = require("gulp-postcss");
 var postcssImport = require("postcss-import");
+var data = require("gulp-data");
+var fs = require("fs");
+// var path = require("path");
 
 gulp.task("pug", function () {
-  return gulp
-    .src("src/*.pug")
-    .pipe(
-      pug({
-        pretty: true,
-      })
-    )
-    .pipe(gulp.dest("build"));
+  return (
+    gulp
+      .src("src/*.pug")
+      // .pipe(
+      //   data({
+      //     const dataJSON = JSON.parse(fs.readFileSync("src/assets/data/data.json")),
+      //     dataJSON.timestamp = Date.now(),
+      //     return dataJSON,
+      //   })
+      // )
+      .pipe(
+        data(function (file) {
+          return JSON.parse(fs.readFileSync("src/assets/data/data.json"));
+        })
+      )
+      .pipe(
+        pug({
+          pretty: true,
+        })
+      )
+      .pipe(gulp.dest("build"))
+  );
 });
 
 gulp.task("css", function () {

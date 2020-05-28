@@ -1,0 +1,116 @@
+{
+  "logo": "Site name",
+
+  "labels": {
+    "copy": {
+      "company": "© \"Company\" 2018",
+      "maker1": "Made with",
+      "maker2": "A1ex"
+    },
+    "error": {
+      "title": "Извините, но здесь ничего нет.",
+      "message": "<p>Неправильно набран адрес, или такой страницы больше не существует.</p><p>Чтобы продолжить работу с сайтом <a href='/'>вернитесь на главную страницу.</a></p>"
+    }
+  },
+  "tovars": [
+    {
+      "id": "321321321",
+      "title": "Двубортное пальто-жакет супер",
+      "content": "Adidas",
+      "discount": "-50%",
+      "price": "2500",
+      "oldPrice": "3500",
+      "img": "assets/img/tovar/001.jpeg"
+    },
+    {
+      "id": "321321322",
+      "title": "Укороченное пальто",
+      "content": "Puma",
+      "discount": "-30%",
+      "price": "2500",
+      "oldPrice": "3000",
+      "img": "assets/img/tovar/002.jpeg"
+    },
+    {
+      "id": "321321323",
+      "title": "Стеганое пальто",
+      "content": "Nike",
+      "discount": "",
+      "price": "2500",
+      "oldPrice": "",
+      "img": "assets/img/tovar/003.jpeg"
+    },
+    {
+      "id": "321321324",
+      "title": "Двубортное пальто-жакет 2",
+      "content": "Adidas",
+      "discount": "-50%",
+      "price": "2500",
+      "oldPrice": "3500",
+      "img": "assets/img/tovar/004.jpeg"
+    },
+    {
+      "id": "321321325",
+      "title": "Двубортное пальто-жакет 3",
+      "content": "Adidas",
+      "discount": "-50%",
+      "price": "2500",
+      "oldPrice": "3500",
+      "img": "assets/img/tovar/005.jpeg"
+    },
+    {
+      "id": "321321326",
+      "title": "Двубортное пальто-жакет 4",
+      "content": "Adidas",
+      "discount": "-50%",
+      "price": "2500",
+      "oldPrice": "3500",
+      "img": "assets/img/tovar/006.jpeg"
+    },
+    {
+      "id": "321321327",
+      "title": "Двубортное пальто-жакет 5",
+      "content": "Adidas",
+      "discount": "-50%",
+      "price": "2500",
+      "oldPrice": "3500",
+      "img": "assets/img/tovar/007.jpeg"
+    },
+    {
+      "id": "321321328",
+      "title": "Двубортное пальто-жакет 6",
+      "content": "Adidas",
+      "discount": "-50%",
+      "price": "2500",
+      "oldPrice": "3500",
+      "img": "assets/img/tovar/008.jpeg"
+    },
+    {
+      "id": "321321329",
+      "title": "Двубортное пальто-жакет 7",
+      "content": "Adidas",
+      "discount": "-50%",
+      "price": "2500",
+      "oldPrice": "3500",
+      "img": "assets/img/tovar/009.jpeg"
+    },
+    {
+      "id": "321321330",
+      "title": "Двубортное пальто-жакет 8",
+      "content": "Adidas",
+      "discount": "-50%",
+      "price": "2500",
+      "oldPrice": "3500",
+      "img": "assets/img/tovar/010.jpeg"
+    },
+    {
+      "id": "321321331",
+      "title": "Двубортное пальто-жакет 9",
+      "content": "Adidas",
+      "discount": "-50%",
+      "price": "2500",
+      "oldPrice": "3500",
+      "img": "assets/img/tovar/011.jpeg"
+    }
+  ]
+}

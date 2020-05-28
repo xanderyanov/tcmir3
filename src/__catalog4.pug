@@ -197,9 +197,48 @@ include __catalogFilter1
 
     .catalog__outer
       +catalogFilter1
+      //- .catalog
+      //-   each val in db_array
+      //-     .tovarCard__area(id=val.id)
+      //-       .tovarCard__areaborder
+      //-         a.tovarCard(href='#')
+      //-           //- .tovarCard__imgOuter
+      //-           .tovarCard__img
+      //-             .tovarCard__fav
+      //-               i.icon-favorit1.favOff
+      //-               i.icon-favorit2.favOn
+      //-             //- .tovarCard__imgBox
+      //-             img.tovarCard__imgImg(src!=val.img, alt='')
+      //-             if val.discount
+      //-               .tovarCard__priceDiscount!=val.discount
+      //-           .tovarCard__info
+      //-             .tovarCard__infoTop
+      //-               .tovarCard__priceArea
+      //-                 if val.oldPrice
+      //-                   .tovarCard__priceOld!= val.oldPrice
+      //-                     span ₽
+      //-                   .tovarCard__price.tovarCard__price_red!= val.price
+      //-                     span ₽
+      //-                 else
+      //-                   .tovarCard__price!= val.price
+      //-                     span ₽
+      //-             .tovarCard__infoTitle
+      //-               span!= val.content
+      //-               span.tovarCard__infoTitleSlash /
+      //-               span!= val.title
+      //-         .tovarCard__wrapper
+      //-           .tovarCard__moreArea
+      //-             .tovarCard__more
+      //-               .tovarCard__moreInfo
+      //-                 span Размеры: 
+      //-                 span S, L, XL, XXL
+      //-               .tovarCard__moreInfoLink Подробнее...
+      
+      
+      //- импорт из data.json (подключается через gulp task)
       .catalog
-        each val in db_array
-          .tovarCard__area(id=val.id)
+        each item in tovars
+          .tovarCard__area(id=item.id)
             .tovarCard__areaborder
               a.tovarCard(href='#')
                 //- .tovarCard__imgOuter
@@ -208,24 +247,24 @@ include __catalogFilter1
                     i.icon-favorit1.favOff
                     i.icon-favorit2.favOn
                   //- .tovarCard__imgBox
-                  img.tovarCard__imgImg(src!=val.img, alt='')
-                  if val.discount
-                    .tovarCard__priceDiscount!=val.discount
+                  img.tovarCard__imgImg(src!=item.img, alt='')
+                  if item.discount
+                    .tovarCard__priceDiscount!=item.discount
                 .tovarCard__info
                   .tovarCard__infoTop
                     .tovarCard__priceArea
-                      if val.oldPrice
-                        .tovarCard__priceOld!= val.oldPrice
+                      if item.oldPrice
+                        .tovarCard__priceOld!= item.oldPrice
                           span ₽
-                        .tovarCard__price.tovarCard__price_red!= val.price
+                        .tovarCard__price.tovarCard__price_red!= item.price
                           span ₽
                       else
-                        .tovarCard__price!= val.price
+                        .tovarCard__price!= item.price
                           span ₽
                   .tovarCard__infoTitle
-                    span!= val.content
+                    span!= item.content
                     span.tovarCard__infoTitleSlash /
-                    span!= val.title
+                    span!= item.title
               .tovarCard__wrapper
                 .tovarCard__moreArea
                   .tovarCard__more
