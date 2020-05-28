@@ -27,6 +27,30 @@
   display: flex;
   width: 100%;
 }
+.promoBox__smallInner a {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.promoBox__smallInner a span {
+  position: absolute;
+  height: 30%;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.8);
+  font-size: 1.5rem;
+  color: var(--tColor);
+  display: flex;
+  align-items: center;
+  padding: 1.25rem;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+.promoBox__smallInner a:hover span {
+  color: var(--redFillhover);
+}
 
 .promoBox__smallInner_1 {
   padding-bottom: 0.625rem;
@@ -52,6 +76,7 @@
   margin-left: auto;
   margin-right: auto;
   position: relative;
+  height: 100%;
 }
 
 .swiper-slide1 {
@@ -59,58 +84,72 @@
   align-items: center;
   justify-content: center;
   position: relative;
-}
-
-.swiper__cadr {
   width: 100%;
-  position: absolute;
+  height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .swiper-slide1 img {
   display: block;
   width: 100%;
+  position: relative;
+  z-index: 1;
 }
 
-.swiper__inner1 {
+.swiper__cadr {
   width: 100%;
-  display: block;
-  transition: all 0.5s;
-  padding-right: 60%;
+  height: 30%;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  background: rgba(255, 255, 255, 0.8);
 }
 
-.swiper__title1 {
-  color: #fff;
-  font-size: 2rem;
-  line-height: 1.2;
-  font-weight: 600;
-  margin-bottom: 1.5rem;
+.swiper__infoBox {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem;
+  /* background: #fff; */
+  align-items: flex-start;
 }
 
-.swiper__text1 {
-  color: #fff;
+.swiper__infoBoxTitle {
+  font-size: 2.5rem;
+  line-height: 1;
+  font-weight: 700;
+  color: var(--tColor);
+}
+
+.swiper__infoBoxDescription {
+  color: var(--tColor);
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.2;
   font-weight: 500;
+  margin-top: 0.625rem;
 }
 
-.swiper__link1 {
-  margin-top: 1.875rem;
-  width: 14rem;
-  height: 3.5rem;
+.swiper__infoBoxLink {
+  margin-top: 1rem;
+  display: flex;
+  padding: 0.625rem 1.25rem;
   background: var(--redFill);
-  border-radius: 6px;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 1.125rem;
+  border-radius: 2px;
+  font-weight: 400;
+  font-size: 1rem;
   color: #fff;
   text-decoration: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   transition: all 0.3s;
 }
 
-.swiper__link1:hover {
+.swiper__infoBoxLink:hover {
   background: var(--redFillhover);
 }
 
@@ -154,7 +193,7 @@
 }
 
 .swiper-pagination1 {
-  bottom: 30px !important;
+  bottom: 10px !important;
 }
 
 .swiper-pagination-bullet {
@@ -168,5 +207,26 @@
 .swiper-pagination-bullet-active {
   opacity: 1;
   background-color: var(--redFill);
+}
+
+.swiper-button-next.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled {
+  opacity: 0.2;
+  pointer-events: visible;
+  background-color: #a6a6a6;
+}
+
+.swiper-button-next.swiper-button-disabled:hover,
+.swiper-button-prev.swiper-button-disabled:hover {
+  background-color: #a6a6a6;
+}
+
+.swiper-button-next:after,
+.swiper-container-rtl .swiper-button-prev:after {
+  content: "";
+}
+.swiper-button-prev:after,
+.swiper-container-rtl .swiper-button-next:after {
+  content: "";
 }
 /* главный слайдер - конец */

@@ -17,14 +17,30 @@
 }
 
 @media only screen and (max-width: 768px) {
+  .gallery__item {
+    width: 25%;
+  }
 }
 
 @media only screen and (max-width: 600px) {
+  html,
+  body {
+    font-size: 12px;
+  }
+  .gallery__item {
+    width: 33.333%;
+  }
 }
 
 @media only screen and (max-width: 480px) {
   .w1 {
     padding: 0 5px 0 5px;
+  }
+  .videoBox__outer {
+    width: 100%;
+  }
+  .gallery__item {
+    width: 50%;
   }
 }
 

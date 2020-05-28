@@ -9,6 +9,7 @@
 
 @import "fonts.css";
 @import "typorraphy.css";
+@import "commons.css";
 
 @import "xandercode.css";
 
@@ -16,7 +17,9 @@
 @import "__header-media.css";
 
 @import "__slider-promo.css";
+@import "__slider-promo-media.css";
 @import "__footer.css";
+@import "__footer-media.css";
 @import "__breadcrumbs.css";
 
 @import "__catalog4.css";
@@ -25,7 +28,16 @@
 @import "__catalogFilter1.css";
 @import "__filter.css";
 @import "__slider-tovar.css";
+
 @import "__tovar.css";
+@import "__tovar-media.css";
+
+@import "__shop.css";
+@import "__shop-media.css";
+
+@import "__cart.css";
+@import "__cart-media.css";
+
 @import "__content.css";
 
 @import "__top-search.css";

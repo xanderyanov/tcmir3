@@ -139,6 +139,7 @@
 .tovarDescTab__area table tr:first-child td {
   background: var(--x1greyLight);
   color: #fff;
+  font-size: 0.875rem;
 }
 
 .tovar__priceArea {
@@ -235,8 +236,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 34px;
-  height: 34px;
+  width: 28px;
+  height: 26px;
   border: 2px solid #a6a6a6;
   cursor: pointer;
   outline: none;
@@ -311,13 +312,13 @@
   background: var(--x1greyLight);
   padding: 0.3125rem;
   text-align: center;
-  font-size: 1rem;
+  font-size: 0.875rem;
   vertical-align: middle;
   color: #fff;
 }
 
 .addToCartTab table tr td {
-  padding: 0.5rem 0;
+  padding: 0.3125rem 0;
   text-align: center;
   font-size: 1rem;
   vertical-align: middle;
@@ -325,7 +326,7 @@
 
 .addToCartTab table tr td > div {
   padding: 0 0.3125rem;
-  min-height: 34px;
+  min-height: 30px;
   border-left: 1px solid var(--colorGrey);
   display: flex;
   align-items: center;
@@ -334,4 +335,36 @@
 
 .addToCartTab table tr td:first-child > div {
   border-left: none;
+}
+
+.sliderImgBtnPrev,
+.sliderImgBtnNext {
+  background-color: #a6a6a6;
+  background-image: none !important;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  margin-top: -1.125rem;
+  transition: all 0.3s;
+}
+
+.sliderImgBtnPrev i,
+.sliderImgBtnNext i {
+  color: #fff;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+.sliderImgBtnPrev:hover,
+.sliderImgBtnNext:hover {
+  background: #be3f46;
+  background-image: none;
+}
+
+.sliderImgBtnPrev:hover i,
+.sliderImgBtnNext:hover i {
+  color: #fff;
 }

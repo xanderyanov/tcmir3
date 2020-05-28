@@ -26,11 +26,23 @@ body {
 }
 
 .title1 {
-  margin-top: 10px;
+  padding: 0.3125rem 0.625rem;
+  background: var(--x1greySuperLight);
+  display: flex;
+  align-items: baseline;
+  margin: 4px 0 0;
 }
 
 .title1 h1,
 .title1 h2,
 .title1 h3 {
   margin: 0;
+  line-height: 1;
+}
+
+.title1 span {
+  font-size: 1rem;
+  line-height: 1;
+  display: flex;
+  margin-left: 1.25rem;
 }

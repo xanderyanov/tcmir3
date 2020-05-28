@@ -26,6 +26,7 @@ $(function () {
 
   // создание блока заголовка дочернего меню и кнопки назад
   $(".adaptiveMenu li:has(ul)").addClass("hasInner");
+
   $(".adaptiveMenu li.hasInner").each(function () {
     // var liTitle = $(this).children("a").text();
     var liTitle1 = $(this).children("a").children("span:first-child").text();
@@ -38,10 +39,11 @@ $(function () {
           liTitle +
           "</span><div class='adaptiveMenuUlTitleBack'>Назад</div></div>"
       );
+    $(this).children("a").append('<span class="menuMoreLink">Подробнее</span>');
   });
 
   var x = 0;
-  $(".adaptiveMenu li.hasInner > a").click(function (e) {
+  $(".adaptiveMenu li.hasInner > a > .menuMoreLink").click(function (e) {
     e.preventDefault();
     // $(this).addClass("active");
     console.log(x);
@@ -80,23 +82,23 @@ $(function () {
       on: {
         init: function () {
           console.log("swiper initialized");
-          $(".swiper-slide").children(".swiper__cadr").removeClass("bounceInRight").fadeOut(500);
+          $(".swiper-slide").children(".swiper__cadr").removeClass("animationfadeIn").fadeOut(500);
           setTimeout(function () {
             $(".swiper-slide-active")
               .children(".swiper__cadr")
               .fadeIn(500)
               .addClass("animated")
-              .addClass("bounceInRight");
+              .addClass("animationfadeIn");
           }, 500);
         },
         slideChange: function () {
-          $(".swiper-slide").children(".swiper__cadr").removeClass("bounceInRight").fadeOut(500);
+          $(".swiper-slide").children(".swiper__cadr").removeClass("animationfadeIn").fadeOut(500);
           setTimeout(function () {
             $(".swiper-slide-active")
               .children(".swiper__cadr")
               .fadeIn(500)
               .addClass("animated")
-              .addClass("bounceInRight");
+              .addClass("animationfadeIn");
           }, 500);
         },
       },
@@ -105,6 +107,13 @@ $(function () {
 
   //Слайдер на странице товара
   if ($(".slider__new").length) {
+    // if ($(".gallery-top-v .swiper-slide2").length == 1) {
+    //   $(".swiper-pagination").addClass("disabled");
+    //   $(".swiper-button-nextV").hide();
+    //   $(".swiper-button-prevV").hide();
+    //   $(".gallery-thumbs-v").hide();
+    // }
+
     var galleryThumbs = new Swiper(".slider__newThumbs", {
       spaceBetween: 5,
       loop: false,
@@ -117,7 +126,7 @@ $(function () {
           autoHeight: true,
         },
         // when window width is >= 480px
-        321: {
+        481: {
           direction: "vertical",
           autoHeight: false,
         },
@@ -147,7 +156,7 @@ $(function () {
           autoHeight: true,
         },
         // when window width is >= 480px
-        321: {
+        481: {
           autoHeight: false,
         },
       },

@@ -1,0 +1,111 @@
+@media only screen and (max-width: 1440px) {
+  .swiper-button-prev1,
+  .swiper-button-next1 {
+    width: 2rem;
+    height: 2rem;
+
+    border-radius: 3px;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .promoBox__area {
+    padding: 0 10px 0 10px;
+  }
+}
+
+@media only screen and (max-width: 1140px) {
+}
+
+@media only screen and (max-width: 1024px) {
+  .swiper__infoBoxTitle {
+    font-size: 1.875rem;
+  }
+
+  .swiper__infoBoxDescription {
+    color: var(--tColor);
+    font-size: 0.875rem;
+  }
+
+  .swiper__infoBoxLink {
+    font-size: 0.875rem;
+  }
+  .promoBox__smallInner a span {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 920px) {
+}
+
+@media only screen and (max-width: 800px) {
+}
+
+@media only screen and (max-width: 768px) {
+  .promoBox__big {
+    width: 100%;
+    padding: 0 0 1.25rem 0;
+  }
+  .promoBox__small {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .promoBox__smallInner {
+    width: 49%;
+    padding: 0 !important;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .promoBox__big {
+    padding: 0 0 1rem 0;
+  }
+  .swiper-button-prev1,
+  .swiper-button-next1 {
+    display: none;
+  }
+  .swiper-pagination1 {
+    bottom: 10px !important;
+    text-align: right;
+    padding-right: 10px;
+  }
+  .swiper__cadr {
+    height: auto;
+  }
+  .swiper__infoBox {
+    padding: 0.625rem;
+  }
+
+  .swiper__infoBoxTitle {
+    font-size: 1.5rem;
+  }
+
+  .swiper__infoBoxDescription {
+    font-size: 0.75rem;
+  }
+
+  .swiper__infoBoxLink {
+    padding: 0.3125rem 1rem;
+    font-size: 0.75rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .promoBox__big {
+    padding: 0 0 0.75rem 0;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .promoBox__smallInner {
+    width: 100%;
+    padding: 0 0 0.75rem 0 !important;
+  }
+  .promoBox__smallInner:last-child {
+    width: 100%;
+    padding: 0 !important;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+}
