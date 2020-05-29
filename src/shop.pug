@@ -1,6 +1,7 @@
 - var pageTitle = 'Страница магазина'
 
 include __header
+include __textInContent
 
 <!DOCTYPE html>
 html(lang="ru-RU")
@@ -13,6 +14,7 @@ body
 	.site__center
 		include __breadcrumbs
 		include __shop
+		+textInContent
 
 
 	.site__footer

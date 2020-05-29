@@ -30,7 +30,7 @@ body {
   background: var(--x1greySuperLight);
   display: flex;
   align-items: baseline;
-  margin: 4px 0 0;
+  margin: 4px auto 0;
 }
 
 .title1 h1,

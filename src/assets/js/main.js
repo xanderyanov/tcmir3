@@ -164,6 +164,59 @@ $(function () {
     });
   }
 
+  // слайдер на странице магазина
+  if ($(".swiper-container_shop").length) {
+    var mySwiper1 = new Swiper(".swiper-container_shop", {
+      slidesPerView: 1,
+      loop: true,
+      autoplay: {
+        delay: 7000,
+        disableOnInteraction: false,
+      },
+      // pagination: {
+      //   el: ".swiper-pagination_shop",
+      //   type: "bullets",
+      //   dynamicBullets: false,
+      //   clickable: true,
+      // },
+      navigation: {
+        nextEl: ".swiper-button-nextShop",
+        prevEl: ".swiper-button-prevShop",
+      },
+      on: {
+        init: function () {
+          console.log("swiper initialized");
+          $(".swiper-slide_shop").children(".swiper__cadr_shop").removeClass("animationfadeIn").fadeOut(500);
+          setTimeout(function () {
+            $(".swiper-slide-active")
+              .children(".swiper__cadr_shop")
+              .fadeIn(500)
+              .addClass("animated")
+              .addClass("animationfadeIn");
+          }, 500);
+          $(".swiper-container").on("mouseenter", function () {
+            mySwiper1.autoplay.stop();
+            console.log("swiper autoplay stop");
+          });
+          $(".swiper-container").on("mouseleave", function () {
+            mySwiper1.autoplay.start();
+            console.log("swiper autoplay start again");
+          });
+        },
+        slideChange: function () {
+          $(".swiper-slide_shop").children(".swiper__cadr_shop").removeClass("animationfadeIn").fadeOut(500);
+          setTimeout(function () {
+            $(".swiper-slide-active")
+              .children(".swiper__cadr_shop")
+              .fadeIn(500)
+              .addClass("animated")
+              .addClass("animationfadeIn");
+          }, 500);
+        },
+      },
+    });
+  }
+
   //минус и плюс в количестве товара на одной карточке
   $(".minus").click(function () {
     var $input = $(this).parent().find("input");
