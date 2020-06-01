@@ -1,16 +1,13 @@
 @media only screen and (max-width: 1280px) {
-  .w1 {
-    padding: 0 10px 0 10px;
-  }
-  .title1 {
-    padding: 0.3125rem 0.625rem;
-  }
 }
 
 @media only screen and (max-width: 1140px) {
 }
 
 @media only screen and (max-width: 1080px) {
+}
+
+@media only screen and (max-width: 1024px) {
 }
 
 @media only screen and (max-width: 920px) {
@@ -20,34 +17,15 @@
 }
 
 @media only screen and (max-width: 768px) {
-  .gallery__item {
-    width: 25%;
+  .adaptiveFilterOnBtn {
+    display: block;
   }
 }
 
 @media only screen and (max-width: 600px) {
-  html,
-  body {
-    font-size: 12px;
-  }
-  .gallery__item {
-    width: 33.333%;
-  }
 }
 
 @media only screen and (max-width: 480px) {
-  .w1 {
-    padding: 0 5px 0 5px;
-  }
-  .title1 {
-    padding: 0.3125rem 0.3125rem;
-  }
-  .videoBox__outer {
-    width: 100%;
-  }
-  .gallery__item {
-    width: 50%;
-  }
 }
 
 @media only screen and (max-width: 400px) {

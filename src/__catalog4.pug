@@ -1,5 +1,9 @@
 //- include assets/data/db
 include __catalogFilter1
+include __adaptiveFilters
+
++adaptiveFilters
+
 
 .catalogPage__outer.w0
   .title1.w1
@@ -33,7 +37,7 @@ include __catalogFilter1
                   a(href='#')
                     span Короткое пальто
                     span 0
-                li.level2.indent2.fw600
+                li.level2.indent2.fw600.hasInner
                   a(href='#')
                     span Длинное пальто
                     span 1
@@ -196,7 +200,9 @@ include __catalogFilter1
 
 
     .catalog__outer
+      .adaptiveFilterOnBtn Фильтрация
       +catalogFilter1
+      
       //- .catalog
       //-   each val in db_array
       //-     .tovarCard__area(id=val.id)

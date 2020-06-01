@@ -26,8 +26,13 @@
 @import "__catalog4-media.css";
 
 @import "__catalogFilter1.css";
+@import "__catalogFilter1-media.css";
+
 @import "__filter.css";
 @import "__slider-tovar.css";
+
+@import "__adaptiveFilters.css";
+@import "__adaptiveFilters-media.css";
 
 @import "__tovar.css";
 @import "__tovar-media.css";

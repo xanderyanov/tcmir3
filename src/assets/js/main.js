@@ -248,7 +248,7 @@ $(function () {
     return false;
   });
 
-  $(".catalogMenu li:has(ul)").addClass("fw600");
+  // $(".catalogMenu li:has(ul)").addClass("fw600");
 
   //Обертывание всех таблиц в блоке .content для правильного их поведения на адаптиве -
   //дальше работает нужный стиль
@@ -384,8 +384,13 @@ $(function () {
     //Кнопка сброса обычных чекбоксов (не цвета) внутри одного блока фильта *найти  checked  false
     $(".filter__checkboxReset").click(function () {
       console.log("сброс фильтров");
-      $(this).closest(".filterBox").find("input[type=checkbox]").removeAttr("checked");
-      $(this).closest(".filterBox").find(".xcheckbox").removeClass("checked");
+      $(this)
+        .closest(".filterBox")
+        .find("input[type=checkbox]")
+        .each(function (i) {
+          this.checked = false;
+        });
+      // $(this).closest(".filterBox").find(".xcheckbox").removeClass("checked");
     });
   }
 
@@ -467,5 +472,85 @@ $(function () {
       vertical: true, // Allow to drag content vertically
       momentum: true, // Continue movement after releasing mouse/touch when panning
     },
+  });
+
+  // Adaptive filters js
+  // Открытие фильтров
+  $(".adaptiveFilterOnBtn").click(function (e) {
+    e.preventDefault();
+    if ($(this).hasClass("open")) {
+      $(this).removeClass("open");
+      $(".overlay1").hide();
+      $(".aFilters__wrapper").fadeOut(200);
+    } else {
+      $(this).addClass("open");
+      $(".overlay1").show();
+      $(".aFilters__wrapper").fadeIn(200);
+    }
+  });
+  // Закрытие адаптивного меню по кнопке Close
+  $(".aFilters__close").click(function () {
+    $(".adaptiveFilterOnBtn").removeClass("open");
+    $(".overlay1").hide();
+    $(".aFilters__wrapper").fadeOut(200);
+  });
+
+  $(".aFilterBox__title").on("click", function () {
+    if ($(this).hasClass("open")) {
+      $(this).removeClass("open");
+      $(".overlay2").hide();
+      $(this).closest(".aFilterBox").children(".aFilterBox__inner").slideUp(200);
+    } else {
+      $(this).addClass("open");
+      $(".overlay2").show();
+      $(this).closest(".aFilterBox").children(".aFilterBox__inner").slideDown(200);
+    }
+  });
+
+  $(".aFilterBox__innerClose").on("click", function () {
+    $(this).closest(".aFilterBox").find(".aFilterBox__inner").slideUp(200);
+    $(this).closest(".aFilterBox").find(".aFilterBox__title").removeClass("open");
+    $(".overlay2").hide();
+  });
+
+  $(".aFilterBoxEnterBtn").on("click", function () {
+    var filtrItemParent = $(this).closest(".aFilterBox__inner");
+
+    if (filtrItemParent.find("input").is(":checked")) {
+      console.log("Выбрано");
+      filtrItemParent.closest(".aFilterBox").find(".aFilterBox__title").addClass("choose").removeClass("open");
+      filtrItemParent.slideUp(200);
+      $(".overlay2").hide();
+    } else {
+      console.log("не выбрано");
+      filtrItemParent.closest(".aFilterBox").find(".aFilterBox__title").removeClass("choose").removeClass("open");
+      filtrItemParent.slideUp(200);
+      $(".overlay2").hide();
+    }
+  });
+  $(".aFilterBox__Reset").click(function () {
+    console.log("сброс фильтров");
+    $(this)
+      .closest(".aFilterBox__innerContent")
+      .find("input[type=checkbox]")
+      .each(function (i) {
+        this.checked = false;
+      });
+    // $(this).closest(".filterBox").find(".xcheckbox").removeClass("checked");
+  });
+
+  $(".aFilter__footerReset").on("click", function () {
+    $(this)
+      .closest(".aFilters__area")
+      .find("input[type=checkbox]")
+      .each(function (i) {
+        this.checked = false;
+      });
+
+    $(this).closest(".aFilters__area").find(".aFilterBox__title").removeClass("choose");
+  });
+
+  $(".aFilter__footerEnter").on("click", function () {
+    // применить фильтры
   });
 });
