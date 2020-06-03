@@ -368,3 +368,44 @@
 .sliderImgBtnNext:hover i {
   color: #fff;
 }
+
+.difColorLink__area {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.difColorLink__title {
+  width: 100%;
+  font-size: 1rem;
+  color: var(--tColor);
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.difColorLink__content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.difColorLink__content a span {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.difColorLink__content a {
+  width: 4rem;
+  height: auto;
+  margin-right: 0.625rem;
+  border: 2px solid #fff;
+  transition: all 0.3s;
+}
+.difColorLink__content a:hover {
+  border: 2px solid var(--redFill);
+}
+
+.difColorLink__content a img {
+  display: block;
+  width: 100%;
+}

@@ -75,7 +75,7 @@
   margin-top: -4px;
   width: 8px;
   height: 8px;
-  background-image: url(../img/plus.png);
+  background: url(../img/plus.png);
   background-size: cover;
   /* border: 1px solid #000; */
 }

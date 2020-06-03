@@ -1,0 +1,24 @@
+- var pageTitle = 'Тестовая страница'
+
+include __header
+
+
+<!DOCTYPE html>
+html(lang="ru-RU")
+	include __head
+body
+
+	.site__header
+		+header
+
+	.site__center
+		include __breadcrumbs
+		
+
+		.testBtn Тестовая кнопка
+
+
+	.site__footer
+		include __footer
+
+	include __scripts

@@ -60,6 +60,22 @@ $(function () {
     $(".adaptiveMenu").animate({ left: x + "%" }, 300);
   });
 
+
+
+  $(".adaptiveMenuUlTitleBack").click(function () {
+    var dataurl = this.attr('data-follow');
+    $.ajax({
+      type: "get",
+      url: "some.php",
+      data: "dataurl",
+      success: function(x,y,z){
+        в заголовок вставляем x
+        в новый адрес назад вставляем y
+        в список вставляем z и т.д.
+      }
+    });
+  });
+
   // главный слайдер на главной
   if ($(".swiper-container1").length) {
     var mySwiper1 = new Swiper(".swiper-container1", {
@@ -462,6 +478,7 @@ $(function () {
     nextClick: true,
     infobar: true,
     protect: true,
+    backFocus: false, // убирает рассинхрон с swiper
     nextEffect: "elastic",
     prevEffect: "elastic",
     padding: 0,
