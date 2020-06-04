@@ -1,5 +1,93 @@
 $(function () {
   // Открытие и закрытие адаптивного меню по кнопке
+  $(".am__JS").click(function (e) {
+    e.preventDefault();
+    if ($(this).hasClass("open")) {
+      $(this).removeClass("open");
+      $(".menuButton1").removeClass("open");
+      $(".am__area").slideUp(200);
+    } else {
+      $(this).addClass("open");
+      $(".menuButton1").addClass("open");
+      $(".am__area").slideDown(200);
+
+      //подгружает контент активного меню в .am_active
+      // и его родителя в .am_back
+    }
+  });
+  // Закрытие адаптивного меню по кнопке Close
+  $(".am__close").click(function () {
+    $(".am__JS").removeClass("open");
+    $(".menuButton1").removeClass("open");
+    $(".am__area").slideUp(200);
+  });
+
+  $(".am__BackBtn").on("click", function (e) {
+    e.preventDefault();
+    console.log("клик назад ");
+
+    var menuWrapper = $(this).closest(".am__area").find(".am_active");
+    var menuWrapperBack = $(this)
+      .closest(".am__area")
+      .find(".am_active")
+      .prev();
+    var menuWrapperNexn = $(this)
+      .closest(".am__area")
+      .find(".am_active")
+      .next();
+
+    menuWrapperBack.animate({ left: 0 + "%" }, 300);
+    menuWrapper.animate({ left: 100 + "%" }, 300);
+    menuWrapperNexn.animate({ left: 200 + "%" }, 300);
+
+    menuWrapper.removeClass("am_active");
+    menuWrapperBack.addClass("am_active");
+
+    var new_menuWrapper = $(this).closest(".am__area").find(".am_active");
+    var new_menuWrapperBack = new_menuWrapper.prev();
+
+    //подгружает контент родителя в new_menuWrapperBack
+  });
+
+  $(".am__more").on("click", function (e) {
+    e.preventDefault();
+    console.log("клик подробнее");
+
+    //подгружает контент дочернего пункта в .am_next
+    //дальше определяет блоки и анимирует
+
+    var menuWrapper = $(this).closest(".am__area").find(".am_active");
+    var menuWrapperBack = $(this)
+      .closest(".am__area")
+      .find(".am_active")
+      .prev();
+    var menuWrapperNexn = $(this)
+      .closest(".am__area")
+      .find(".am_active")
+      .next();
+
+    menuWrapperBack.animate({ left: -200 + "%" }, 300);
+    menuWrapper.animate({ left: -100 + "%" }, 300);
+    menuWrapperNexn.animate({ left: 0 + "%" }, 300);
+
+    menuWrapper.removeClass("am_active");
+    menuWrapperNexn.addClass("am_active");
+  });
+
+  // $(".am__BackBtn").on("click", function (e) {
+  //   e.preventDefault();
+  //   console.log("клик назад ");
+
+  //   var menuWrapper = $(this).closest(".am__area").find(".am_active");
+  //   var menuWrapperBack = $(this).closest(".am__area").find(".am_back");
+  //   var menuWrapperNexn = $(this).closest(".am__area").find(".am_next");
+
+  //   menuWrapper.animate({ left: 100 + "%" }, 300);
+  //   menuWrapperBack.animate({ left: 0 + "%" }, 300);
+  //   menuWrapperNexn.animate({ left: 200 + "%" }, 300);
+  // });
+
+  // Открытие и закрытие адаптивного меню по кнопке
   $(".menuButton1__areaJS").click(function (e) {
     e.preventDefault();
     if ($(this).hasClass("open")) {
@@ -12,8 +100,6 @@ $(function () {
       $(".adaptiveMenu__areaJS").slideDown(200);
       var adaptiveMenu__titleH = $(".adaptiveMenu__title").outerHeight();
       console.log("adaptiveMenu__titleH " + adaptiveMenu__titleH);
-      // Код выше показывает высоту заголовка адаптивного меню -
-      // и задает отступ пунктов - код ниже
       $(".adaptiveMenu__wrapper").css({ paddingTop: adaptiveMenu__titleH });
     }
   });
@@ -82,7 +168,10 @@ $(function () {
       on: {
         init: function () {
           console.log("swiper initialized");
-          $(".swiper-slide").children(".swiper__cadr").removeClass("animationfadeIn").fadeOut(500);
+          $(".swiper-slide")
+            .children(".swiper__cadr")
+            .removeClass("animationfadeIn")
+            .fadeOut(500);
           setTimeout(function () {
             $(".swiper-slide-active")
               .children(".swiper__cadr")
@@ -92,7 +181,10 @@ $(function () {
           }, 500);
         },
         slideChange: function () {
-          $(".swiper-slide").children(".swiper__cadr").removeClass("animationfadeIn").fadeOut(500);
+          $(".swiper-slide")
+            .children(".swiper__cadr")
+            .removeClass("animationfadeIn")
+            .fadeOut(500);
           setTimeout(function () {
             $(".swiper-slide-active")
               .children(".swiper__cadr")
@@ -186,7 +278,10 @@ $(function () {
       on: {
         init: function () {
           console.log("swiper initialized");
-          $(".swiper-slide_shop").children(".swiper__cadr_shop").removeClass("animationfadeIn").fadeOut(500);
+          $(".swiper-slide_shop")
+            .children(".swiper__cadr_shop")
+            .removeClass("animationfadeIn")
+            .fadeOut(500);
           setTimeout(function () {
             $(".swiper-slide-active")
               .children(".swiper__cadr_shop")
@@ -204,7 +299,10 @@ $(function () {
           });
         },
         slideChange: function () {
-          $(".swiper-slide_shop").children(".swiper__cadr_shop").removeClass("animationfadeIn").fadeOut(500);
+          $(".swiper-slide_shop")
+            .children(".swiper__cadr_shop")
+            .removeClass("animationfadeIn")
+            .fadeOut(500);
           setTimeout(function () {
             $(".swiper-slide-active")
               .children(".swiper__cadr_shop")
@@ -316,12 +414,17 @@ $(function () {
     var parameters = favorites.join();
     // console.log(favorites);
     console.log(parameters);
-    $(location).attr("href", "http://mir.deltal.beget.tech/category.html/" + parameters);
+    $(location).attr(
+      "href",
+      "http://mir.deltal.beget.tech/category.html/" + parameters
+    );
   });
 
   //Раскрытие фильтра в каталоге по клику на его заголовке
   $(".catalogFilter1__itemTitle").on("click", function () {
-    var fCont = $(this).closest(".catalogFilter1__item").find(".catalogFilter1__itemContent");
+    var fCont = $(this)
+      .closest(".catalogFilter1__item")
+      .find(".catalogFilter1__itemContent");
     var fAll = $(this).closest(".catalogFilter1");
     if ($(this).hasClass("open1")) {
       $(this).removeClass("open1");
@@ -357,12 +460,18 @@ $(function () {
 
     if (filtrItemParent.find("input").is(":checked")) {
       console.log("Выбрано");
-      filtrItemParent.closest(".catalogFilter1__item").find(".catalogFilter1__itemTitle").addClass("active");
+      filtrItemParent
+        .closest(".catalogFilter1__item")
+        .find(".catalogFilter1__itemTitle")
+        .addClass("active");
       $(".catalogFilter1__itemContent").removeClass("visible");
       $(".catalogFilter1__itemTitle").removeClass("open1");
     } else {
       console.log("не выбрано");
-      filtrItemParent.closest(".catalogFilter1__item").find(".catalogFilter1__itemTitle").removeClass("active");
+      filtrItemParent
+        .closest(".catalogFilter1__item")
+        .find(".catalogFilter1__itemTitle")
+        .removeClass("active");
       $(".catalogFilter1__itemContent").removeClass("visible");
       $(".catalogFilter1__itemTitle").removeClass("open1");
     }
@@ -415,10 +524,22 @@ $(function () {
     $(".filter__checkboxColorReset").click(function (e) {
       console.log("сброс фильтров");
       e.preventDefault();
-      $(this).closest(".filterBox").find("input[type=checkbox]").removeAttr("checked");
-      $(this).closest(".filterBox").find(".checkboxColor__item").removeClass("checked");
-      $(this).closest(".filterBox").find(".checkboxColorBox").removeClass("checked");
-      $(this).closest(".filterBox").find(".checkboxColorTitle").removeClass("checkColor");
+      $(this)
+        .closest(".filterBox")
+        .find("input[type=checkbox]")
+        .removeAttr("checked");
+      $(this)
+        .closest(".filterBox")
+        .find(".checkboxColor__item")
+        .removeClass("checked");
+      $(this)
+        .closest(".filterBox")
+        .find(".checkboxColorBox")
+        .removeClass("checked");
+      $(this)
+        .closest(".filterBox")
+        .find(".checkboxColorTitle")
+        .removeClass("checkColor");
     });
   }
 
@@ -426,12 +547,18 @@ $(function () {
   if ($(".filterBox__sort").length) {
     $(".filterSort__item").click(function (e) {
       e.preventDefault();
-      $(this).closest(".filterBox__content").find(".filterSort__item").removeClass("filterSort__item_active");
+      $(this)
+        .closest(".filterBox__content")
+        .find(".filterSort__item")
+        .removeClass("filterSort__item_active");
       $(this).addClass("filterSort__item_active");
       var activeSortName = $(this).text();
       console.log(activeSortName);
       $(".catalogFilter1__itemTitle_sort span").html(activeSortName);
-      $(this).closest(".catalogFilter1__item").find(".catalogFilter1__itemTitle").addClass("active");
+      $(this)
+        .closest(".catalogFilter1__item")
+        .find(".catalogFilter1__itemTitle")
+        .addClass("active");
       $(".catalogFilter1__itemContent").removeClass("visible");
       $(".catalogFilter1__itemTitle").removeClass("open1");
     });
@@ -441,17 +568,44 @@ $(function () {
   $(".resetAllFiltersBtn").click(function (e) {
     e.preventDefault();
     //сброс обычныч чекбоксов и закрытие раскрытых блоков
-    $(this).closest(".catalogFilter1").find("input[type=checkbox]").removeAttr("checked");
-    $(this).closest(".catalogFilter1").find(".xcheckbox").removeClass("checked");
-    $(this).closest(".catalogFilter1").find(".catalogFilter1__itemTitle").removeClass("active");
-    $(this).closest(".catalogFilter1").find(".catalogFilter1__itemContent").removeClass("visible");
-    $(this).closest(".catalogFilter1").find(".catalogFilter1__itemTitle").removeClass("open1");
+    $(this)
+      .closest(".catalogFilter1")
+      .find("input[type=checkbox]")
+      .removeAttr("checked");
+    $(this)
+      .closest(".catalogFilter1")
+      .find(".xcheckbox")
+      .removeClass("checked");
+    $(this)
+      .closest(".catalogFilter1")
+      .find(".catalogFilter1__itemTitle")
+      .removeClass("active");
+    $(this)
+      .closest(".catalogFilter1")
+      .find(".catalogFilter1__itemContent")
+      .removeClass("visible");
+    $(this)
+      .closest(".catalogFilter1")
+      .find(".catalogFilter1__itemTitle")
+      .removeClass("open1");
     //сброс чекбоксов с цветом
-    $(this).closest(".catalogFilter1").find(".checkboxColorTitle").removeClass("checkColor");
-    $(this).closest(".catalogFilter1").find(".checkboxColor__item").removeClass("checked");
-    $(this).closest(".catalogFilter1").find(".checkboxColorBox").removeClass("checked");
+    $(this)
+      .closest(".catalogFilter1")
+      .find(".checkboxColorTitle")
+      .removeClass("checkColor");
+    $(this)
+      .closest(".catalogFilter1")
+      .find(".checkboxColor__item")
+      .removeClass("checked");
+    $(this)
+      .closest(".catalogFilter1")
+      .find(".checkboxColorBox")
+      .removeClass("checked");
     //сброс сортировки
-    $(this).closest(".catalogFilter1").find(".filterSort__item").removeClass("filterSort__item_active");
+    $(this)
+      .closest(".catalogFilter1")
+      .find(".filterSort__item")
+      .removeClass("filterSort__item_active");
     $(".catalogFilter1__itemTitle_sort span").html("Сортировка");
   });
 
@@ -499,17 +653,26 @@ $(function () {
     if ($(this).hasClass("open")) {
       $(this).removeClass("open");
       $(".overlay2").hide();
-      $(this).closest(".aFilterBox").children(".aFilterBox__inner").slideUp(200);
+      $(this)
+        .closest(".aFilterBox")
+        .children(".aFilterBox__inner")
+        .slideUp(200);
     } else {
       $(this).addClass("open");
       $(".overlay2").show();
-      $(this).closest(".aFilterBox").children(".aFilterBox__inner").slideDown(200);
+      $(this)
+        .closest(".aFilterBox")
+        .children(".aFilterBox__inner")
+        .slideDown(200);
     }
   });
 
   $(".aFilterBox__innerClose").on("click", function () {
     $(this).closest(".aFilterBox").find(".aFilterBox__inner").slideUp(200);
-    $(this).closest(".aFilterBox").find(".aFilterBox__title").removeClass("open");
+    $(this)
+      .closest(".aFilterBox")
+      .find(".aFilterBox__title")
+      .removeClass("open");
     $(".overlay2").hide();
   });
 
@@ -518,12 +681,20 @@ $(function () {
 
     if (filtrItemParent.find("input").is(":checked")) {
       console.log("Выбрано");
-      filtrItemParent.closest(".aFilterBox").find(".aFilterBox__title").addClass("choose").removeClass("open");
+      filtrItemParent
+        .closest(".aFilterBox")
+        .find(".aFilterBox__title")
+        .addClass("choose")
+        .removeClass("open");
       filtrItemParent.slideUp(200);
       $(".overlay2").hide();
     } else {
       console.log("не выбрано");
-      filtrItemParent.closest(".aFilterBox").find(".aFilterBox__title").removeClass("choose").removeClass("open");
+      filtrItemParent
+        .closest(".aFilterBox")
+        .find(".aFilterBox__title")
+        .removeClass("choose")
+        .removeClass("open");
       filtrItemParent.slideUp(200);
       $(".overlay2").hide();
     }
@@ -547,7 +718,10 @@ $(function () {
         this.checked = false;
       });
 
-    $(this).closest(".aFilters__area").find(".aFilterBox__title").removeClass("choose");
+    $(this)
+      .closest(".aFilters__area")
+      .find(".aFilterBox__title")
+      .removeClass("choose");
   });
 
   $(".aFilter__footerEnter").on("click", function () {

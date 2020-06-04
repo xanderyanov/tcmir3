@@ -1,0 +1,64 @@
+@media only screen and (max-width: 1280px) {
+}
+
+@media only screen and (max-width: 1140px) {
+}
+
+@media only screen and (max-width: 1080px) {
+}
+
+@media only screen and (max-width: 1024px) {
+  .menuButton1__area {
+    display: flex;
+  }
+}
+
+@media only screen and (max-width: 920px) {
+}
+
+@media only screen and (max-width: 800px) {
+}
+
+@media only screen and (max-width: 768px) {
+  .menuButton1__area {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+}
+
+@media only screen and (max-width: 480px) {
+  .menuButton1__area {
+    height: 2rem;
+    width: 2rem;
+  }
+  .menuButton1 {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .menuButton1 span {
+    height: 0.125rem;
+    width: 1rem;
+    left: 0.25rem;
+  }
+  .menuButton1 span:nth-child(1) {
+    top: 0.3125rem;
+  }
+
+  .menuButton1 span:nth-child(2) {
+    top: 0.6875rem;
+  }
+
+  .menuButton1 span:nth-child(3) {
+    top: 1.0625rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+}
+
+@media only screen and (max-width: 320px) {
+}
