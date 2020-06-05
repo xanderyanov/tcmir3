@@ -192,7 +192,11 @@
 
 .shop__intro {
   width: 100%;
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.9375rem;
+}
+
+.shop__intro .content {
+  margin: 0;
 }
 
 .shop__brandsArea {
@@ -201,14 +205,14 @@
 }
 
 .shop__brands {
-  margin: 0 -5px;
+  margin: 0 -3px;
   display: flex;
   flex-wrap: wrap;
 }
 
 .shop__brandsItemOuter {
-  width: 25%;
-  padding: 5px;
+  width: 16.666%;
+  padding: 3px;
   position: relative;
 }
 
@@ -292,4 +296,83 @@
 .shop__contactsItem:hover i,
 .shop__contactsItem:hover span {
   color: var(--redFill);
+}
+
+/* brands carousel */
+
+.shop__brandsCarouselArea {
+  width: 100%;
+  position: relative;
+  margin-bottom: 1.25rem;
+}
+
+.brandsCarousel {
+  position: relative;
+  padding: 0 2rem;
+}
+
+.brandsCarousel-container1 {
+  position: relative;
+}
+
+.brandsCarousel__wrapper {
+  display: flex;
+}
+
+.brandsCarousel__btn {
+  position: absolute;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background: var(--x1greySuperLight);
+  cursor: pointer;
+  transition: all 0.3s;
+  top: 50%;
+  margin-top: -0.875rem;
+  left: auto;
+  right: auto;
+  bottom: auto;
+  outline: none;
+}
+
+.brandsCarousel__btn:hover {
+  background: var(--redFill);
+}
+
+.brandsCarousel__btn i {
+  color: #362b23;
+  font-size: 0.75rem;
+  transition: all 0.3s;
+}
+
+.brandsCarousel__btn:hover i {
+  color: #fff;
+}
+
+.brandsCarousel__btnPrev {
+  left: 0;
+}
+.brandsCarousel__btnNext {
+  right: 0;
+}
+
+.brandsCarousel-pagination1 {
+  bottom: 30px !important;
+}
+
+.swiper-pagination-bullet {
+  opacity: 1;
+  width: 12px;
+  height: 12px;
+  background-color: var(--x1greySuperLight);
+  border-radius: 50%;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  background-color: var(--redFill);
 }

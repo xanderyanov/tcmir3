@@ -2,6 +2,9 @@
   .shop {
     padding-top: 10px !important;
   }
+  .shop__info {
+    padding: 0 0 0 10px;
+  }
 }
 
 @media only screen and (max-width: 1140px) {
@@ -14,6 +17,15 @@
 }
 
 @media only screen and (max-width: 920px) {
+  .shop__sliderArea {
+    width: 60%;
+  }
+  .shop__info {
+    width: 40%;
+  }
+  .shop__brandsItemOuter {
+    width: 25%;
+  }
 }
 
 @media only screen and (max-width: 800px) {
@@ -21,17 +33,14 @@
 
 @media only screen and (max-width: 768px) {
   .shop__sliderArea {
-    width: 60%;
+    width: 100%;
   }
   .shop__info {
-    width: 40%;
-    padding: 0 0 0 10px;
+    width: 100%;
+    padding: 20px 0 0 0;
   }
   .shop__brandsItemOuter {
-    width: 33.333%;
-  }
-  .swiper__cadr_shop {
-    /* height: 30%; */
+    width: 16.666%;
   }
   .swiper__infoBoxShopTitle {
     font-size: 1rem;
@@ -44,31 +53,28 @@
 }
 
 @media only screen and (max-width: 600px) {
-  .shop__sliderArea {
-    width: 100%;
-    order: 2;
-  }
-  .shop__info {
-    order: 1;
-    width: 100%;
-    padding: 0 0 10px 0;
-  }
-  .shop__brandsItem {
-    shop__brandsitemouter: 25%;
+  .shop {
+    padding: 5px !important;
   }
   .swiper__infoBoxShop {
     padding: 0.625rem;
   }
+  .shop__brandsItemOuter {
+    width: 25%;
+  }
 }
 
 @media only screen and (max-width: 480px) {
-  .shop__brandsItemOuter {
-    width: 33.333%;
-  }
 }
 
 @media only screen and (max-width: 400px) {
 }
 
 @media only screen and (max-width: 320px) {
+  .shop__brandsItemOuter {
+    width: 33.333%;
+  }
+  /* .shop__brandsItemOuter {
+    width: 20%;
+  } */
 }

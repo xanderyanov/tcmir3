@@ -291,6 +291,50 @@ $(function () {
       },
     });
   }
+  // карусель брендов
+  if ($(".brandsCarousel-container1").length) {
+    var carousel = new Swiper(".brandsCarousel-container1", {
+      slidesPerView: 2,
+      spaceBetween: 0,
+      slidesPerGroup: 1,
+      loop: true,
+      loopFillGroupWithBlank: true,
+      autoplay: {
+        delay: 7000,
+        disableOnInteraction: false,
+      },
+      navigation: {
+        prevEl: ".brandsCarousel__btnPrev",
+        nextEl: ".brandsCarousel__btnNext",
+      },
+      breakpoints: {
+        1141: {
+          slidesPerView: 5,
+          spaceBetween: 0,
+        },
+        921: {
+          slidesPerView: 4,
+          spaceBetween: 0,
+        },
+        769: {
+          slidesPerView: 3,
+          spaceBetween: 0,
+        },
+        601: {
+          slidesPerView: 5,
+          spaceBetween: 0,
+        },
+        481: {
+          slidesPerView: 4,
+          spaceBetween: 0,
+        },
+        321: {
+          slidesPerView: 3,
+          spaceBetween: 0,
+        },
+      },
+    });
+  }
 
   //минус и плюс в количестве товара на одной карточке
   $(".minus").click(function () {
