@@ -1,5 +1,70 @@
 $(function () {
   // Открытие и закрытие адаптивного меню по кнопке
+  $(".am__JS").click(function (e) {
+    e.preventDefault();
+    if ($(this).hasClass("open")) {
+      $(this).removeClass("open");
+      $(".menuButton1").removeClass("open");
+      $(".am__area").slideUp(200);
+    } else {
+      $(this).addClass("open");
+      $(".menuButton1").addClass("open");
+      $(".am__area").slideDown(200);
+
+      //подгружает контент активного меню в .am_active
+      // и его родителя в .am_back
+    }
+  });
+  // Закрытие адаптивного меню по кнопке Close
+  $(".am__close").click(function () {
+    $(".am__JS").removeClass("open");
+    $(".menuButton1").removeClass("open");
+    $(".am__area").slideUp(200);
+  });
+
+  $(".am__BackBtn").on("click", function (e) {
+    e.preventDefault();
+    console.log("клик назад ");
+
+    var menuWrapper = $(this).closest(".am__area").find(".am_active");
+    var menuWrapperBack = $(this).closest(".am__area").find(".am_active").prev();
+    var menuWrapperNexn = $(this).closest(".am__area").find(".am_active").next();
+
+    menuWrapperBack.animate({ left: 0 + "%" }, 300);
+    menuWrapper.animate({ left: 100 + "%" }, 300);
+    menuWrapperNexn.animate({ left: 200 + "%" }, 300);
+
+    menuWrapper.removeClass("am_active");
+    menuWrapperBack.addClass("am_active");
+
+    var new_menuWrapper = $(this).closest(".am__area").find(".am_active");
+    var new_menuWrapperBack = new_menuWrapper.prev();
+
+    //подгружает контент родителя в new_menuWrapperBack
+  });
+
+  $(".am__more").on("click", function (e) {
+    e.preventDefault();
+    console.log("клик подробнее");
+
+    //подгружает контент дочернего пункта в .am_next
+    //дальше определяет блоки и анимирует
+
+    var menuWrapper = $(this).closest(".am__area").find(".am_active");
+    var menuWrapperBack = $(this).closest(".am__area").find(".am_active").prev();
+    var menuWrapperNexn = $(this).closest(".am__area").find(".am_active").next();
+
+    menuWrapperBack.animate({ left: -200 + "%" }, 300);
+    menuWrapper.animate({ left: -100 + "%" }, 300);
+    menuWrapperNexn.animate({ left: 0 + "%" }, 300);
+
+    menuWrapper.removeClass("am_active");
+    menuWrapperNexn.addClass("am_active");
+  });
+
+  /* Адаптивное меню для всей структуры - подойдет для modx - его код в чанке __adaptive-menu.pug
+  
+  // Открытие и закрытие адаптивного меню по кнопке
   $(".menuButton1__areaJS").click(function (e) {
     e.preventDefault();
     if ($(this).hasClass("open")) {
@@ -12,12 +77,9 @@ $(function () {
       $(".adaptiveMenu__areaJS").slideDown(200);
       var adaptiveMenu__titleH = $(".adaptiveMenu__title").outerHeight();
       console.log("adaptiveMenu__titleH " + adaptiveMenu__titleH);
-      // Код выше показывает высоту заголовка адаптивного меню -
-      // и задает отступ пунктов - код ниже
       $(".adaptiveMenu__wrapper").css({ paddingTop: adaptiveMenu__titleH });
     }
   });
-  // Закрытие адаптивного меню по кнопке Close
   $(".adaptiveMenu__areaClose").click(function () {
     $(".menuButton1__areaJS").removeClass("open");
     $(".menuButton1").removeClass("open");
@@ -26,7 +88,6 @@ $(function () {
 
   // создание блока заголовка дочернего меню и кнопки назад
   $(".adaptiveMenu li:has(ul)").addClass("hasInner");
-
   $(".adaptiveMenu li.hasInner").each(function () {
     // var liTitle = $(this).children("a").text();
     var liTitle1 = $(this).children("a").children("span:first-child").text();
@@ -60,22 +121,20 @@ $(function () {
     $(".adaptiveMenu").animate({ left: x + "%" }, 300);
   });
 
-
-
   $(".adaptiveMenuUlTitleBack").click(function () {
-    var dataurl = this.attr('data-follow');
+    var dataurl = this.attr("data-follow");
     $.ajax({
       type: "get",
       url: "some.php",
       data: "dataurl",
-      success: function(x,y,z){
-        в заголовок вставляем x
-        в новый адрес назад вставляем y
-        в список вставляем z и т.д.
-      }
+      success: function (x, y, z) {
+        // в заголовок вставляем x
+        // в новый адрес назад вставляем y
+        // в список вставляем z и т.д.
+      },
     });
   });
-
+  */
   // главный слайдер на главной
   if ($(".swiper-container1").length) {
     var mySwiper1 = new Swiper(".swiper-container1", {
