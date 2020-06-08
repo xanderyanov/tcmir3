@@ -1,3 +1,6 @@
+include __callAction.pug
+
+
 .shop__area.w0
   .title1.w1
     h1 Название магазина
@@ -164,13 +167,17 @@
           i.icon-arr-left1
         .swiper-button-next.brandsCarousel__btn.brandsCarousel__btnNext
           i.icon-arr-right1
-      .shop__contactsArea
-        .shop__contactsTitle Связь с магазином:
-        .shop__contacts
-          a.shop__contactsItem(href="tel:88008888888")
-            i.icon-phone1
-            span 8-800-888-88-88
+      
+      +callAction
+      
+      
+      //- .shop__contactsArea
+      //-   .shop__contactsTitle Связь с магазином:
+      //-   .shop__contacts
+      //-     a.shop__contactsItem(href="tel:88008888888")
+      //-       i.icon-phone1
+      //-       span 8-800-888-88-88
 
-          a.shop__contactsItem(href="mailto:shop@tcmir.ru")
-            span shop@tcmir.ru
+      //-     a.shop__contactsItem(href="mailto:shop@tcmir.ru")
+      //-       span shop@tcmir.ru
 

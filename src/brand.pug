@@ -1,0 +1,24 @@
+include __header
+include __brand
+
+- var pageTitle = 'Бренд'
+
+
+<!DOCTYPE html>
+html(lang="ru-RU")
+	include __head
+body
+
+	.site__header
+		+header
+
+	.site__center
+		include __breadcrumbs
+		+brand
+		include __catalog4
+
+
+	.site__footer
+		include __footer
+
+	include __scripts

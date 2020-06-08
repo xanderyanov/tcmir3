@@ -37,8 +37,17 @@
 @import "__tovar.css";
 @import "__tovar-media.css";
 
+@import "__sizeSelector.css";
+@import "__sizeSelector-media.css";
+
+@import "__callAction.css";
+@import "__callAction-media.css";
+
 @import "__shop.css";
 @import "__shop-media.css";
+
+@import "__brand.css";
+@import "__brand-media.css";
 
 @import "__cart.css";
 @import "__cart-media.css";

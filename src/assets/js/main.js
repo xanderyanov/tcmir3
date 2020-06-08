@@ -673,4 +673,24 @@ $(function () {
   $(".aFilter__footerEnter").on("click", function () {
     // применить фильтры
   });
+
+  if ($(".sizeSelector__area").length) {
+    $(".sizeSelector__item").on("click", function () {
+      if ($(this).hasClass("sizeSelector__item_selected")) {
+        $(this).removeClass("sizeSelector__item_selected");
+      } else {
+        $(this).addClass("sizeSelector__item_selected");
+      }
+    });
+  }
+
+  if ($(".callActionBtn").length) {
+    $(".callActionBtn").on("click", function () {
+      // if ($(this).hasClass("callActionBtn_open")) {
+      //   $(this).removeClass("callActionBtn_open");
+      // } else {
+      $(this).addClass("callActionBtn_open");
+      // }
+    });
+  }
 });

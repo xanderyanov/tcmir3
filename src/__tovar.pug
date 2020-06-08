@@ -1,3 +1,6 @@
+include __sizeSelector.pug
+include __callAction.pug
+
 .xBlock__area.w0
   .xBlock.w1
     .tovarPage__area
@@ -20,10 +23,14 @@
               | Короткое описание товара в несоклько строчек Lorem ipsum dolor sit amet consectetur adipisicing
               | elit. Ipsa optio corporis voluptates ea expedita molestiae ipsam, est esse modi libero beatae
               | perferendis omnis inventore provident pariatur veniam. Omnis, in sit.
-            .tovarCard__icons.tovarCard__icons_inPage
-              .tovarCard__icon.tovarCard__icon_sale -25%
-              .tovarCard__icon.tovarCard__icon_new NEW
-              .tovarCard__icon.tovarCard__icon_hit ХИТ
+            
+            +callAction
+            
+            
+            //- .tovarCard__icons.tovarCard__icons_inPage
+            //-   .tovarCard__icon.tovarCard__icon_sale -25%
+            //-   .tovarCard__icon.tovarCard__icon_new NEW
+            //-   .tovarCard__icon.tovarCard__icon_hit ХИТ
             .tovarDescTab__area
               .table_outer250
                 table
@@ -46,6 +53,8 @@
                       td Размер
                       td XL, L, S
             
+            +sizeSelector
+            
             .difColorLink__area
               .difColorLink__title В другом цвете:
               .difColorLink__content
@@ -64,6 +73,8 @@
                 a(href="#", title="12321")
                   img(src="assets/img/difcolor/02.jpg", alt="")
 
+
+            
 
             .tovar__priceArea
               .tovar__oldPrice Старая цена: 1800 руб

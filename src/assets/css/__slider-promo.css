@@ -35,17 +35,17 @@
 }
 .promoBox__smallInner a span {
   position: absolute;
-  height: 30%;
+  height: 25%;
   width: 100%;
   left: 0;
   bottom: 0;
   background: rgba(255, 255, 255, 0.8);
-  font-size: 1.5rem;
+  font-size: 1.375rem;
   color: var(--tColor);
   display: flex;
   align-items: center;
   padding: 1.25rem;
-  font-weight: 600;
+  font-weight: 500;
   transition: all 0.3s;
 }
 .promoBox__smallInner a:hover span {
@@ -122,9 +122,9 @@
 }
 
 .swiper__infoBoxTitle {
-  font-size: 2.5rem;
+  font-size: 2rem;
   line-height: 1;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--tColor);
 }
 
@@ -140,17 +140,19 @@
   margin-top: 1rem;
   display: flex;
   padding: 0.625rem 1.25rem;
-  background: var(--redFill);
-  border-radius: 2px;
+  /* background: #fff; */
+  border-radius: 4px;
   font-weight: 400;
   font-size: 1rem;
-  color: #fff;
+  color: var(--redFill);
   text-decoration: none;
   transition: all 0.3s;
+  border: 1px solid var(--redFill);
 }
 
 .swiper__infoBoxLink:hover {
   background: var(--redFillhover);
+  color: #fff;
 }
 
 .swiper-button-prev1,

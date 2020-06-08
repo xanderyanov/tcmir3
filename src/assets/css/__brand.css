@@ -1,0 +1,22 @@
+.brand__title {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+  padding: 20px 0;
+  border-bottom: 2px solid var(--x1grey);
+}
+
+.brand__logo {
+  width: 20%;
+}
+
+.brand__logo img {
+  display: block;
+  width: 100%;
+}
+
+.brand__intro {
+  width: 80%;
+  padding: 0 0 0 20px;
+}
