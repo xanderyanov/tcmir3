@@ -1,11 +1,13 @@
 - var pageTitle = 'Текстовая страница'
 
-include __header
+include assets/chunks/header/__header
 include __textInContent
+include assets/chunks/footer/__footer
+include assets/chunks/scripts/__scripts
 
 <!DOCTYPE html>
 html(lang="ru-RU")
-	include __head
+	include assets/chunks/head/__head
 body
 
 	.site__header
@@ -19,6 +21,6 @@ body
 
 
 	.site__footer
-		include __footer
+		+footer
 
-	include __scripts
+	+scripts

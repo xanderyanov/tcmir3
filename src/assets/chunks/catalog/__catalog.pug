@@ -1,0 +1,41 @@
+mixin catalogArea  
+  //- импорт из data.json (подключается через gulp task)
+  .catalog
+    each item in tovars
+      .tovarCard__area(id=item.id)
+        .tovarCard__areaborder
+          a.tovarCard(href='#')
+            //- .tovarCard__imgOuter
+            .tovarCard__img
+              .tovarCard__fav
+                i.icon-favorit1.favOff
+                i.icon-favorit2.favOn
+              //- .tovarCard__imgBox
+              img.tovarCard__imgImg(src!=item.img, alt='')
+              if item.discount
+                .tovarCard__priceDiscount!=item.discount
+            .tovarCard__info
+              .tovarCard__infoTop
+                .tovarCard__priceArea
+                  if item.oldPrice
+                    .tovarCard__priceOld!= item.oldPrice
+                      span ₽
+                    .tovarCard__price.tovarCard__price_red!= item.price
+                      span ₽
+                  else
+                    .tovarCard__price!= item.price
+                      span ₽
+              .tovarCard__infoTitle
+                span!= item.content
+                span.tovarCard__infoTitleSlash /
+                span!= item.title
+          .tovarCard__wrapper
+            .tovarCard__moreArea
+              .tovarCard__more
+                .tovarCard__moreInfo
+                  span Размеры: 
+                  span S, L, XL, XXL
+                .tovarCard__moreInfoLink Подробнее...
+            
+
+  

@@ -1,0 +1,95 @@
+mixin tovarArsTab
+  .addToCartTab
+    table
+      tbody
+        tr
+          th
+            span.hide_600 Артикул
+            span.show_600 Арт
+          th Цена за шт./₽
+          th
+            span.hide_600 Упаковка, 
+            span.show_600 Уп., 
+            |                     шт.
+          th Цена уп./₽
+          th В корзине
+        tr
+          td
+            div 192_999_82019_00_35A
+          td
+            div 100
+          td
+            div 1
+          td
+            div 100
+          td
+            div
+              .number.number_inTab(data-wareid='54c93a0964ea5321eccc95d5', data-mode='qcont')
+                span.minus_tab(data-wareid='54c93a0964ea5321eccc95d5', data-change='-1', title='Уменьшить количество') -
+                input.cartCountInput(type='text', name='count', value='0', min='0', data-wareid='54c93a0964ea5321eccc95d5')
+                span.plus_tab(data-wareid='54c93a0964ea5321eccc95d5', data-change='1', title='Увеличить количество') +
+        tr
+          td
+            div 192_999_82019_00_35A
+          td
+            div 100
+          td
+            div 10
+          td
+            div 1000
+          td
+            .text-center.number_inTabArea
+              .number.number_inTab(data-wareid='54c93a0964ea5321eccc95d5', data-mode='qcont')
+                span.minus_tab(data-wareid='54c93a0964ea5321eccc95d5', data-change='-1', title='Уменьшить количество') -
+                input.cartCountInput(type='text', name='count', value='0', min='0', data-wareid='54c93a0964ea5321eccc95d5')
+                span.plus_tab(data-wareid='54c93a0964ea5321eccc95d5', data-change='1', title='Увеличить количество') +
+              //
+                <div style="display: none;" data-wareid="@Model" data-mode="rcont" class="rcontArea">
+                <div class="rcont__item" data-wareid="@Model" data-change="A">
+                <span class="rcont__itemInfo" title="@LC(MLText.According)"
+                >@LC(MLText.Required): <span data-wareid="@Model" data-mode="rval"></span>
+                </span>
+                <img
+                class="tbl-control valign-content"
+                src="~/img/elements/redcartenter.png"
+                title="@LC(MLText.AddRequired)"
+                />@*data-wareid="@wid" data-change="A"*@
+                </div>
+                <div class="spacer-6"></div>
+                </div>
+              .rcontArea(style='display: block;', data-wareid='@Model', data-mode='rcont')
+                .rcont__item(data-wareid='@Model', data-change='A')
+                  span.rcont__itemInfo(title='Исходя из количества других товаров в корзине')
+                    | Требуется: 
+                    span(data-wareid='@Model', data-mode='rval') 5
+        tr
+          td
+            div 192_999_82019_00_35A
+          td
+            div 100
+          td
+            div 20
+          td
+            div 2000
+          td
+            div
+              .number.number_inTab(data-wareid='54c93a0964ea5321eccc95d5', data-mode='qcont')
+                span.minus_tab(data-wareid='54c93a0964ea5321eccc95d5', data-change='-1', title='Уменьшить количество') -
+                input.cartCountInput(type='text', name='count', value='0', min='0', data-wareid='54c93a0964ea5321eccc95d5')
+                span.plus_tab(data-wareid='54c93a0964ea5321eccc95d5', data-change='1', title='Увеличить количество') +
+        tr
+          td
+            div 192_999_82019_00_35A
+          td
+            div 100
+          td
+            div 30
+          td
+            div 3000
+          td
+            div
+              .number.number_inTab(data-wareid='54c93a0964ea5321eccc95d5', data-mode='qcont')
+                span.minus_tab(data-wareid='54c93a0964ea5321eccc95d5', data-change='-1', title='Уменьшить количество') -
+                input.cartCountInput(type='text', name='count', value='0', min='0', data-wareid='54c93a0964ea5321eccc95d5')
+                span.plus_tab(data-wareid='54c93a0964ea5321eccc95d5', data-change='1', title='Увеличить количество') +
+  

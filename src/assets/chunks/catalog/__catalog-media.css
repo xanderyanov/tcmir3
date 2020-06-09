@@ -29,9 +29,7 @@
   .catalog__outer {
     width: 100%;
   }
-  .catalogMenu__outer {
-    display: none;
-  }
+
   .tovarCard__area:hover {
     z-index: 1;
   }

@@ -1,0 +1,124 @@
+mixin filterSort
+  .filterBox.filterBox__sort
+    //- .filterBox__title Выбор материала:
+    .filterBox__content
+      a.filterSort__item(href="#")
+        |По популярности
+      a.filterSort__item(href="#")
+        |По убыванию цены
+      a.filterSort__item(href="#")
+        |По возрастанию цены
+      a.filterSort__item(href="#")
+        |По новинкам
+      a.filterSort__item(href="#")
+        |По скидкам
+
+
+mixin filterCheckbox_material
+  .filterBox.filterBox__checkbox
+    .filterBox__title Выбор материала:
+    .filterBox__content
+      .xcheckbox
+        input#checkbox_1(type='checkbox', value='1', data-val="filter")
+        label(for='checkbox_1') Хлопок 100%
+      .xcheckbox
+        input#checkbox_2(type='checkbox', value='2', data-val="filter")
+        label(for='checkbox_2') Джинсовая ткань
+      .xcheckbox
+        input#checkbox_3(type='checkbox', value='3', data-val="filter")
+        label(for='checkbox_3') Лён
+      .xcheckbox
+        input#checkbox_4(type='checkbox', value='4', data-val="filter")
+        label(for='checkbox_4') Вискоза
+      .xcheckbox
+        input#checkbox_5(type='checkbox', value='5', data-val="filter")
+        label(for='checkbox_5') Искуственная кожа
+      .xcheckbox
+        input#checkbox_6(type='checkbox', value='6', data-val="filter")
+        label(for='checkbox_6') Натуральная кожа
+      .xcheckbox
+        input#checkbox_7(type='checkbox', value='7', data-val="filter")
+        label(for='checkbox_7') Синтетическое волокно
+    .filter__checkboxReset Очистить выбор
+    .filterEnterBtn
+      span Применить
+
+
+
+mixin filterCheckbox_brand
+  .filterBox.filterBox__checkbox
+    .filterBox__title Выбор бренда:
+    .filterBox__content
+      .xcheckbox
+        input#checkbox_11(type='checkbox', value='1')
+        label(for='checkbox_11') Adidas
+      .xcheckbox
+        input#checkbox_22(type='checkbox', value='2')
+        label(for='checkbox_22') Nike
+      .xcheckbox
+        input#checkbox_33(type='checkbox', value='3')
+        label(for='checkbox_33') Guinot
+      .xcheckbox
+        input#checkbox_44(type='checkbox', value='4')
+        label(for='checkbox_44') Sony
+      .xcheckbox
+        input#checkbox_55(type='checkbox', value='5')
+        label(for='checkbox_55') Apple
+      .xcheckbox
+        input#checkbox_66(type='checkbox', value='6')
+        label(for='checkbox_66') Puma
+      .xcheckbox
+        input#checkbox_77(type='checkbox', value='7')
+        label(for='checkbox_77') Большевичка
+    .filter__checkboxReset Очистить выбор
+    .filterEnterBtn
+      span Применить
+
+
+mixin filterCheckbox_color
+  .filterBox.filterBox__checkColor
+    .filterBox__title Выбор цвета:
+    .filterBox__content.filter__checkboxColor
+      .checkboxColor__item(title='Красный')
+        input.checkboxColor(type='checkbox')
+        span.checkboxColorBox.checkboxColorBox_ff0000(style='background: #ff0000;')
+        span.checkboxColorTitle Красный
+      .checkboxColor__item(title='Оранжевый')
+        input.checkboxColor(type='checkbox')
+        span.checkboxColorBox.checkboxColorBox_FFA500(style='background: #ffa500;')
+        span.checkboxColorTitle Оранжевый
+      .checkboxColor__item(title='Желтый')
+        input.checkboxColor(type='checkbox')
+        span.checkboxColorBox.checkboxColorBox_ffff00(style='background: #ffff00;')
+        span.checkboxColorTitle Желтый
+      .checkboxColor__item(title='Зеленый')
+        input.checkboxColor(type='checkbox')
+        span.checkboxColorBox.checkboxColorBox_008000(style='background: #008000;')
+        span.checkboxColorTitle Зеленый
+      .checkboxColor__item(title='Голубой')
+        input.checkboxColor(type='checkbox')
+        span.checkboxColorBox.checkboxColorBox_00bfff(style='background: #00bfff;')
+        span.checkboxColorTitle Голубой
+      .checkboxColor__item(title='Синий')
+        input.checkboxColor(type='checkbox')
+        span.checkboxColorBox.checkboxColorBox_0000FF(style='background: #0000ff;')
+        span.checkboxColorTitle Синий
+      .checkboxColor__item(title='Фиолетовый')
+        input.checkboxColor(type='checkbox')
+        span.checkboxColorBox.checkboxColorBox_8b00ff(style='background: #8b00ff;')
+        span.checkboxColorTitle Фиолетовый
+      .checkboxColor__item(title='Белый')
+        input.checkboxColor(type='checkbox')
+        span.checkboxColorBox.checkboxColorBox_ffffff(style='background: #ffffff;')
+        span.checkboxColorTitle Белый
+      .checkboxColor__item(title='Черный')
+        input.checkboxColor(type='checkbox')
+        span.checkboxColorBox.checkboxColorBox_000000(style='background: #000000;')
+        span.checkboxColorTitle Черный
+      .checkboxColor__item(title='Серый')
+        input.checkboxColor(type='checkbox')
+        span.checkboxColorBox.checkboxColorBox_808080(style='background: #808080;')
+        span.checkboxColorTitle Серый
+    .filter__checkboxColorReset Очистить выбор
+    .filterEnterBtn
+      span Применить

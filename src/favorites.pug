@@ -1,14 +1,12 @@
+- var pageTitle = 'Избранное'
+
 include assets/chunks/header/__header
-include __brand
 include assets/chunks/filters/__filters
 include assets/chunks/filters-adaptive/__filters-adaptive
 include assets/chunks/leftMenu/__leftMenu
 include assets/chunks/catalog/__catalog
 include assets/chunks/footer/__footer
 include assets/chunks/scripts/__scripts
-
-- var pageTitle = 'Бренд'
-
 
 <!DOCTYPE html>
 html(lang="ru-RU")
@@ -19,8 +17,8 @@ body
 		+header
 
 	.site__center
-		include __breadcrumbs
-		+brand
+		//- include __breadcrumbs
+
 		.catalogPage.w1
 			+adaptiveFilters
 			+leftMenu

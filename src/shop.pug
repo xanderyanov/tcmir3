@@ -1,23 +1,28 @@
-- var pageTitle = 'Страница магазина'
+- var pageTitle = 'Страница магазина Каспер'
 
-include __header
+include assets/chunks/header/__header
+include assets/chunks/shop/__shop
 include __textInContent
+include assets/chunks/footer/__footer
+include assets/chunks/scripts/__scripts
 
 <!DOCTYPE html>
 html(lang="ru-RU")
-	include __head
+	include assets/chunks/head/__head
 body
 
 	.site__header
 		+header
 
 	.site__center
+		.title1.w1
+			h1= pageTitle
 		//- include __breadcrumbs
-		include __shop
+		+shop
 		+textInContent
 
 
 	.site__footer
-		include __footer
+		+footer
 
-	include __scripts
+	+scripts

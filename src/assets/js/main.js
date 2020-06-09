@@ -262,13 +262,13 @@ $(function () {
         init: function () {
           console.log("swiper initialized");
           $(".swiper-slide_shop").children(".swiper__cadr_shop").removeClass("animationfadeIn").fadeOut(500);
-          setTimeout(function () {
-            $(".swiper-slide-active")
-              .children(".swiper__cadr_shop")
-              .fadeIn(500)
-              .addClass("animated")
-              .addClass("animationfadeIn");
-          }, 500);
+          // setTimeout(function () {
+          //   $(".swiper-slide-active")
+          //     .children(".swiper__cadr_shop")
+          //     .fadeIn(500)
+          //     .addClass("animated")
+          //     .addClass("animationfadeIn");
+          // }, 500);
           $(".swiper-container").on("mouseenter", function () {
             mySwiper1.autoplay.stop();
             console.log("swiper autoplay stop");
@@ -280,13 +280,13 @@ $(function () {
         },
         slideChange: function () {
           $(".swiper-slide_shop").children(".swiper__cadr_shop").removeClass("animationfadeIn").fadeOut(500);
-          setTimeout(function () {
-            $(".swiper-slide-active")
-              .children(".swiper__cadr_shop")
-              .fadeIn(500)
-              .addClass("animated")
-              .addClass("animationfadeIn");
-          }, 500);
+          // setTimeout(function () {
+          //   $(".swiper-slide-active")
+          //     .children(".swiper__cadr_shop")
+          //     .fadeIn(500)
+          //     .addClass("animated")
+          //     .addClass("animationfadeIn");
+          // }, 500);
         },
       },
     });

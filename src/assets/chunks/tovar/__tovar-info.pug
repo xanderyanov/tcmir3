@@ -1,0 +1,76 @@
+include __callAction
+include __sizeSelector
+
+mixin tovar-info
+  .tovarPage__info
+    .tovarTitle
+      .tovarTitle__logo
+        img(src='assets/img/vendor/camelactive/camel_active.png', alt='')
+      .tovarTitle__text
+        h1 Название товара
+    .tovarPage__desc
+      | Короткое описание товара в несоклько строчек Lorem ipsum dolor sit amet consectetur adipisicing
+      | elit. Ipsa optio corporis voluptates ea expedita molestiae ipsam, est esse modi libero beatae
+      | perferendis omnis inventore provident pariatur veniam. Omnis, in sit.
+    
+    +callAction
+    
+    //- .tovarCard__icons.tovarCard__icons_inPage
+    //-   .tovarCard__icon.tovarCard__icon_sale -25%
+    //-   .tovarCard__icon.tovarCard__icon_new NEW
+    //-   .tovarCard__icon.tovarCard__icon_hit ХИТ
+    .tovarDescTab__area
+      .table_outer250
+        table
+          tbody
+            tr
+              td(colspan='2') Характеристики:
+            tr
+              td Пол
+              td Женский
+            tr
+              td Сезон
+              td Лето
+            tr
+              td Стиль
+              td Спортивный
+            tr
+              td Материал
+              td Хлопок
+            tr
+              td Размер
+              td XL, L, S
+    
+    +sizeSelector
+    
+    .difColorLink__area
+      .difColorLink__title В другом цвете:
+      .difColorLink__content
+        a(href="#", title="12321")
+          img(src="assets/img/difcolor/01.jpg", alt="")
+        a(href="#", title="12321")
+          img(src="assets/img/difcolor/02.jpg", alt="")
+        a(href="#", title="12321")
+          img(src="assets/img/difcolor/01.jpg", alt="")
+        a(href="#", title="12321")
+          span(style='background-color: #C56430; height: 100%')
+        a(href="#", title="12321")
+          img(src="assets/img/difcolor/02.jpg", alt="")
+        a(href="#", title="12321")
+          img(src="assets/img/difcolor/01.jpg", alt="")
+        a(href="#", title="12321")
+          img(src="assets/img/difcolor/02.jpg", alt="")
+
+
+    
+
+    .tovar__priceArea
+      .tovar__oldPrice Старая цена: 1800 руб
+      .tovar__price Цена: 1500 руб
+    .addToCartOuter
+      .number
+        button.minus -
+        input.cartCountInput(type='text', name='count', value='1')
+        button.plus +
+      a.tovar__addToCart.redBtn_withSpan(href='#', type='submit', name='ms2_action', value='cart/add')
+        span Купить

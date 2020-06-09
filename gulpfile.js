@@ -107,7 +107,7 @@ gulp.task("clean", function () {
 gulp.task("build", gulp.series("clean", gulp.parallel("css", "pug", "image", "js", "myJs", "fonts")));
 
 gulp.task("watch", function () {
-  gulp.watch("src/assets/css/**/*.*", gulp.series("css")).on("uplink", function (filepath) {
+  gulp.watch("src/assets/**/*.*", gulp.series("css")).on("uplink", function (filepath) {
     remember.forget("css", path.resolve(filepath));
     delete cached.caches.styles[path.resolve(filepath)];
   });

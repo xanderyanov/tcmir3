@@ -1,0 +1,340 @@
+.filterBox {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  background: var(--colorLightGrey);
+  height: 100%;
+}
+
+.filterBox__title {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: var(--tColor);
+  font-weight: 600;
+}
+
+.xcheckbox {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.3125rem;
+}
+
+.xcheckbox input[type="checkbox"] {
+  display: none;
+}
+
+.xcheckbox label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  padding: 0 0 5px 20px;
+  cursor: pointer;
+}
+
+.xcheckbox label::before {
+  position: absolute;
+  top: 1px;
+  left: 0;
+  content: "";
+  display: block;
+  height: 12px;
+  width: 12px;
+  border: 1px solid var(--tColor);
+  border-radius: 2px;
+  /* box-shadow: inset 0px 0px 3px 0px #f76060; */
+}
+
+.xcheckbox label::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 6px;
+  border-left: 2px solid;
+  border-bottom: 2px solid;
+  transform: rotate(-45deg);
+  position: absolute;
+  left: 3px;
+  top: 5px;
+  color: #ff4141;
+}
+
+.xcheckbox input[type="checkbox"] + label::after {
+  content: none;
+}
+/*ÐŸÐ¾ÐºÐ°Ð·Ñ‹Ð²Ð°ÐµÐ¼ Ð³Ð°Ð»ÐºÑƒ Ð¿Ð¾ ÑÐ¾ÑÑ‚Ð¾ÑÐ½Ð¸ÑŽ checked*/
+.xcheckbox input[type="checkbox"]:checked + label::after {
+  content: "";
+}
+
+.xcheckbox input[type="checkbox"]:checked + label {
+  color: #ff4141;
+}
+
+/*  */
+
+.xradio {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.3125rem;
+}
+
+.xradio input[type="radio"] {
+  display: none;
+}
+
+.xradio label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  line-height: 1.3;
+  padding: 0 0 5px 30px;
+  cursor: pointer;
+}
+
+.xradio label::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  display: block;
+  height: 1rem;
+  width: 1rem;
+  border: 0.125rem solid #f76060;
+  border-radius: 10px;
+  /* box-shadow: inset 0px 0px 3px 0px #f76060; */
+}
+
+.xradio label::after {
+  content: "";
+  display: block;
+  height: 0.5rem;
+  width: 0.5rem;
+  border-radius: 50%;
+  position: absolute;
+  left: 0.375rem;
+  top: 0.375rem;
+  background: #f76060;
+}
+
+.xradio input[type="radio"] + label::after {
+  content: none;
+}
+.xradio input[type="radio"]:checked + label::after {
+  content: "";
+}
+
+.xradio input[type="radio"]:checked + label {
+  color: #ff4141;
+}
+
+/*  */
+.xselect__outer {
+  width: 100%;
+  border: #ccc 1px solid;
+  border-radius: 2px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  position: relative;
+  background: #eee;
+  margin-bottom: 5px;
+}
+.xselect {
+  width: 100%;
+  border: none;
+  height: 2rem;
+  line-height: 2rem;
+  position: relative;
+  background: none;
+  z-index: 100;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 0 1.5rem 0 0.3125rem;
+  font-size: 1rem;
+  outline: none;
+}
+
+.xselect__btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex;
+  /* background: #eee; */
+  height: 2rem;
+  width: 2rem;
+  z-index: 50;
+}
+
+.xselect__btn:after {
+  content: "";
+  position: absolute;
+  left: 0.5rem;
+  top: 0.75rem;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0.5rem 0.5rem 0 0.5rem;
+  border-color: #f76060 transparent transparent transparent;
+}
+
+.filterEnterBtn {
+  padding: 0.3125rem 0.625rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--x1greyLight);
+  border-radius: 4px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 0.875rem;
+  transition: all 0.2s;
+}
+
+.filterEnterBtn:hover {
+  background: var(--x1grey);
+}
+
+.filter__checkboxColor {
+  display: flex;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+}
+
+.checkboxColor__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 0.3125rem;
+}
+
+/* .checkboxColor__item.checked {
+  border: 2px solid #f76060;
+} */
+
+.checkboxColor__item input {
+  visibility: hidden;
+  display: none;
+}
+
+.checkboxColorBox {
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  /* padding: 1px; */
+  border: 2px solid #dcdcdc;
+  cursor: pointer;
+  margin: 2px;
+}
+.checkboxColorBox.checked {
+  border: 2px solid #f76060;
+}
+
+.filter__checkboxColorReset {
+  padding: 0.3125rem 0.625rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--x1greySuperLight);
+  border-radius: 4px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 0.875rem;
+  transition: all 0.2s;
+  margin-bottom: 0.625rem;
+}
+.filter__checkboxColorReset:hover {
+  background: var(--x1greyLight);
+}
+
+.filter__checkboxReset {
+  padding: 0.3125rem 0.625rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--x1greySuperLight);
+  border-radius: 4px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 0.875rem;
+  transition: all 0.2s;
+  margin-bottom: 0.625rem;
+}
+.filter__checkboxReset:hover {
+  background: var(--x1greyLight);
+}
+
+.checkboxColorTitle {
+  font-size: 0.75rem;
+  color: var(--tColor);
+  margin-left: 0.625rem;
+}
+
+.checkColor {
+  color: var(--redFill);
+}
+
+.filterSort__item {
+  display: flex;
+  margin-bottom: 0.5rem;
+  white-space: nowrap;
+  font-size: 0.75rem;
+  text-decoration: none;
+  color: var(--tColor);
+  transition: all 0.2s;
+  position: relative;
+  padding: 0 0 0 1rem;
+}
+.filterSort__item_active {
+  color: var(--redFill);
+}
+.filterSort__item:before {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 6px;
+  border-left: 2px solid;
+  border-bottom: 2px solid;
+  transform: rotate(-45deg);
+  position: absolute;
+  left: 3px;
+  top: 5px;
+  color: var(--redFill);
+  display: none;
+}
+.filterSort__item_active:before {
+  display: block;
+}
+
+.filterSort__item:hover {
+  color: var(--redFill);
+}
+
+.catalogFilter1__itemTitle_sort {
+  background: var(--x1greySuperLight);
+}
+
+.active.catalogFilter1__itemTitle_sort {
+  background: var(--x1greyDark);
+}
+
+.resetAllFiltersBtn {
+  padding: 0.3125rem 0.625rem;
+  border-radius: 5px;
+  position: relative;
+  cursor: pointer;
+  background: var(--colorLightGrey);
+}
+.resetAllFiltersBtn:hover {
+  background: var(--x1greySuperLight);
+}
+
+.resetAllFiltersBtn span {
+  font-size: 0.875rem;
+}

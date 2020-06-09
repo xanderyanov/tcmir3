@@ -1,10 +1,16 @@
 - var pageTitle = 'Каталог'
 
-include __header
+include assets/chunks/header/__header
+include assets/chunks/filters/__filters
+include assets/chunks/filters-adaptive/__filters-adaptive
+include assets/chunks/leftMenu/__leftMenu
+include assets/chunks/catalog/__catalog
+include assets/chunks/footer/__footer
+include assets/chunks/scripts/__scripts
 
 <!DOCTYPE html>
 html(lang="ru-RU")
-	include __head
+	include assets/chunks/head/__head
 body
 
 	.site__header
@@ -12,11 +18,23 @@ body
 
 	.site__center
 		//- include __breadcrumbs
+		.catalogPage__outer.w0
+			.title1.w1
+				h1= pageTitle
+				span 785
+			.catalogPage.w1
+				+adaptiveFilters
+				+leftMenu
+				.catalog__outer
+					.adaptiveFilterOnBtn Фильтрация
+					+filtersArea
+					+catalogArea
+            
 
-		include __catalog4
+  
 
 
 	.site__footer
-		include __footer
+		+footer
 
-	include __scripts
+	+scripts

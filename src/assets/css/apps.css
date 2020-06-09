@@ -16,35 +16,41 @@
 @import "__header.css";
 @import "__header-media.css";
 
-@import "__slider-promo.css";
-@import "__slider-promo-media.css";
-@import "__footer.css";
-@import "__footer-media.css";
+@import "../chunks/slider-promo/__slider-promo.css";
+@import "../chunks/slider-promo/__slider-promo-media.css";
+
+@import "../chunks/footer/__footer.css";
+@import "../chunks/footer/__footer-media.css";
+
 @import "__breadcrumbs.css";
 
-@import "__catalog4.css";
-@import "__catalog4-media.css";
+@import "../chunks/leftMenu/__leftMenu.css";
+@import "../chunks/leftMenu/__leftMenu-media.css";
 
-@import "__catalogFilter1.css";
-@import "__catalogFilter1-media.css";
+@import "../chunks/catalog/__catalog.css";
+@import "../chunks/catalog/__catalog-media.css";
 
-@import "__filter.css";
-@import "__slider-tovar.css";
+@import "../chunks/filters/__filters.css";
+@import "../chunks/filters/__filters-media.css";
+@import "../chunks/filters/__filters-lib.css";
 
-@import "__adaptiveFilters.css";
-@import "__adaptiveFilters-media.css";
+@import "../chunks/filters-adaptive/__filters-adaptive.css";
+@import "../chunks/filters-adaptive/__filters-adaptive-media.css";
 
-@import "__tovar.css";
-@import "__tovar-media.css";
+@import "../chunks/filters-adaptive/__filters-adaptive.css";
+@import "../chunks/filters-adaptive/__filters-adaptive-media.css";
 
-@import "__sizeSelector.css";
-@import "__sizeSelector-media.css";
+@import "../chunks/tovar/__tovar-slider.css";
+@import "../chunks/tovar/__tovar-slider-media.css";
+@import "../chunks/tovar/__tovar-info.css";
+@import "../chunks/tovar/__tovar-info-media.css";
+@import "../chunks/tovar/__callAction.css";
+@import "../chunks/tovar/__callAction-media.css";
+@import "../chunks/tovar/__sizeSelector.css";
+@import "../chunks/tovar/__sizeSelector-media.css";
 
-@import "__callAction.css";
-@import "__callAction-media.css";
-
-@import "__shop.css";
-@import "__shop-media.css";
+@import "../chunks/shop/__shop.css";
+@import "../chunks/shop/__shop-media.css";
 
 @import "__brand.css";
 @import "__brand-media.css";
@@ -54,14 +60,14 @@
 
 @import "__content.css";
 
-@import "__top-search.css";
-@import "__top-search-media.css";
+@import "../chunks/topSearch/__top-search.css";
+@import "../chunks/topSearch/__top-search-media.css";
 
 /* @import "__adaptive-menu.css";
 @import "__adaptive-menu-media.css"; */
 
-@import "__adaptiveMenuArs.css";
-@import "__adaptiveMenuArs-media.css";
+@import "../chunks/adaptiveMenu/__adaptiveMenuArs.css";
+@import "../chunks/adaptiveMenu/__adaptiveMenuArs-media.css";
 
 @import "main.css";
 @import "media.css";
