@@ -1,3 +1,7 @@
+.tovarPage__sliderArea {
+  width: 60%;
+}
+
 .slider__new {
   width: 100%;
   display: flex;

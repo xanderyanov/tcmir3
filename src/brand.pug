@@ -1,5 +1,6 @@
 include assets/chunks/header/__header
-include __brand
+include assets/chunks/breadcrumbs/__breadcrumbs
+include assets/chunks/brand/__brand
 include assets/chunks/filters/__filters
 include assets/chunks/filters-adaptive/__filters-adaptive
 include assets/chunks/leftMenu/__leftMenu
@@ -19,7 +20,7 @@ body
 		+header
 
 	.site__center
-		include __breadcrumbs
+		+breadcrumbs
 		+brand
 		.catalogPage.w1
 			+adaptiveFilters

@@ -14,10 +14,6 @@
   flex-wrap: wrap;
 }
 
-.tovarPage__sliderArea {
-  width: 60%;
-}
-
 .tovarPage__info {
   width: 40%;
   display: flex;

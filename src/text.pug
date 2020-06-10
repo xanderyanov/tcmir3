@@ -1,7 +1,8 @@
 - var pageTitle = 'Текстовая страница'
 
 include assets/chunks/header/__header
-include __textInContent
+include assets/chunks/breadcrumbs/__breadcrumbs
+include assets/chunks/content/__textInContent
 include assets/chunks/footer/__footer
 include assets/chunks/scripts/__scripts
 
@@ -14,7 +15,7 @@ body
 		+header
 
 	.site__center
-		include __breadcrumbs
+		+breadcrumbs
 		+textInContent
 
 		

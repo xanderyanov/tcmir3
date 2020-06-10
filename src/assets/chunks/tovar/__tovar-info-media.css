@@ -29,9 +29,9 @@
   .tovarPage__area {
     margin-bottom: 1.25rem;
   }
-  .tovarPage__sliderArea {
+  /* .tovarPage__sliderArea {
     width: 100%;
-  }
+  } */
 
   .tovarPage__info {
     width: 100%;
@@ -91,21 +91,6 @@
 }
 
 @media only screen and (max-width: 480px) {
-  .slider__new {
-    flex-direction: column;
-    height: auto;
-  }
-  .slider__newContent {
-    width: 100%;
-    margin-bottom: 5px;
-  }
-  .slider__newThumbs {
-    width: 100%;
-  }
-  .slider__newThumbs > .swiper-wrapper > .swiper-slide {
-    height: 100%;
-    /* min-height: 70px; */
-  }
 }
 
 @media only screen and (max-width: 400px) {

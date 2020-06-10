@@ -1,6 +1,7 @@
 - var pageTitle = 'Тестовая страница'
 
 include assets/chunks/header/__header
+include assets/chunks/breadcrumbs/__breadcrumbs
 include assets/chunks/footer/__footer
 include assets/chunks/scripts/__scripts
 
@@ -14,7 +15,7 @@ body
 		+header
 
 	.site__center
-		include __breadcrumbs
+		+breadcrumbs
 		
 
 		.testBtn Тестовая кнопка

@@ -13,8 +13,8 @@
 
 @import "xandercode.css";
 
-@import "__header.css";
-@import "__header-media.css";
+@import "../chunks/header/__header.css";
+@import "../chunks/header/__header-media.css";
 
 @import "../chunks/slider-promo/__slider-promo.css";
 @import "../chunks/slider-promo/__slider-promo-media.css";
@@ -22,7 +22,7 @@
 @import "../chunks/footer/__footer.css";
 @import "../chunks/footer/__footer-media.css";
 
-@import "__breadcrumbs.css";
+@import "../chunks/breadcrumbs/__breadcrumbs.css";
 
 @import "../chunks/leftMenu/__leftMenu.css";
 @import "../chunks/leftMenu/__leftMenu-media.css";
@@ -30,9 +30,9 @@
 @import "../chunks/catalog/__catalog.css";
 @import "../chunks/catalog/__catalog-media.css";
 
+@import "../chunks/filters/__filters-lib.css";
 @import "../chunks/filters/__filters.css";
 @import "../chunks/filters/__filters-media.css";
-@import "../chunks/filters/__filters-lib.css";
 
 @import "../chunks/filters-adaptive/__filters-adaptive.css";
 @import "../chunks/filters-adaptive/__filters-adaptive-media.css";
@@ -52,13 +52,13 @@
 @import "../chunks/shop/__shop.css";
 @import "../chunks/shop/__shop-media.css";
 
-@import "__brand.css";
-@import "__brand-media.css";
+@import "../chunks/brand/__brand.css";
+@import "../chunks/brand/__brand-media.css";
 
-@import "__cart.css";
-@import "__cart-media.css";
+@import "../chunks/cart/__cart.css";
+@import "../chunks/cart/__cart-media.css";
 
-@import "__content.css";
+@import "../chunks/content/__content.css";
 
 @import "../chunks/topSearch/__top-search.css";
 @import "../chunks/topSearch/__top-search-media.css";
