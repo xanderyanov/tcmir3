@@ -107,7 +107,7 @@ gulp.task("clean", function () {
 gulp.task("build", gulp.series("clean", gulp.parallel("css", "pug", "image", "js", "myJs", "fonts")));
 
 gulp.task("watch", function () {
-  gulp.watch("src/assets/**/*.*", gulp.series("css")).on("uplink", function (filepath) {
+  gulp.watch("src/assets/**/*.css*", gulp.series("css")).on("uplink", function (filepath) {
     remember.forget("css", path.resolve(filepath));
     delete cached.caches.styles[path.resolve(filepath)];
   });
@@ -115,7 +115,7 @@ gulp.task("watch", function () {
     remember.forget("image", path.resolve(filepath));
     delete cached.caches.image[path.resolve(filepath)];
   });
-  gulp.watch("src/assets/js/**/*.*", gulp.series("myJs")).on("uplink", function (filepath) {
+  gulp.watch("src/assets/js/**/*.js*", gulp.series("myJs")).on("uplink", function (filepath) {
     remember.forget("myJs", path.resolve(filepath));
     delete cached.caches.myJs[path.resolve(filepath)];
   });

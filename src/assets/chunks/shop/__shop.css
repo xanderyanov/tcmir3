@@ -209,6 +209,7 @@
 
 .shop__callActionArea {
   width: 65%;
+  margin-left: auto;
 }
 
 .shop__intro {

@@ -302,14 +302,14 @@ $(function () {
       },
     });
   }
-  // карусель брендов
+  // карусель брендов-
   if ($(".brandsCarousel-container1").length) {
     var carousel = new Swiper(".brandsCarousel-container1", {
       slidesPerView: 2,
       spaceBetween: 0,
       slidesPerGroup: 1,
-      loop: true,
-      loopFillGroupWithBlank: true,
+      loop: false,
+      loopFillGroupWithBlank: false,
       autoplay: {
         delay: 7000,
         disableOnInteraction: false,
