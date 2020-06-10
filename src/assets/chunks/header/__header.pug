@@ -5,6 +5,7 @@ include ../topSearch/__top-search.pug
 
 
 mixin header
+  +adaptiveSearch
   +adaptiveMenuArs
   +adaptiveHeader
   header.header.w0
@@ -81,6 +82,8 @@ mixin adaptiveHeader
       a(href="#")
         img(src="assets/img/logo1a.png", alt="")
     .header__action
+      .aH__iconLink.adaptiveSearchOn__btn
+        i.icon-search1
       .aH__iconLink(href="#")
         i.icon-present1
       .aH__iconLink

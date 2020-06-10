@@ -135,6 +135,17 @@ $(function () {
     });
   });
   */
+
+  $(".adaptiveSearchOn__btn").click(function () {
+    $(this).toggleClass("open");
+    $(".adaptiveSearch__area").slideToggle(200);
+  });
+
+  $(".adaptiveSearch__areaClose").click(function () {
+    $(".adaptiveSearchOn__btn").toggleClass("open");
+    $(".adaptiveSearch__area").slideToggle(200);
+  });
+
   // главный слайдер на главной
   if ($(".swiper-container1").length) {
     var mySwiper1 = new Swiper(".swiper-container1", {

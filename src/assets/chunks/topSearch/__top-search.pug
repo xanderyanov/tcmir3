@@ -4,3 +4,14 @@ mixin topSearch
       input.topSearch__input(type='text', name='', value='', placeholder='Поиск по названию товара')
       button.topSearch__btn(type='submit')
         i.icon-search1
+
+mixin adaptiveSearch
+  .adaptiveSearch__area
+    .adaptiveSearch__areaClose
+      i.icon-close1
+    .adaptiveSearch__outer
+      .adaptiveSearch
+        form.topSearch(action='#', method='get')
+          input.topSearch__input(type='text', name='', value='', placeholder='Поиск по названию товара')
+          button.topSearch__btn(type='submit')
+            i.icon-search1

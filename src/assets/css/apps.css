@@ -61,6 +61,7 @@
 @import "../chunks/content/__content.css";
 
 @import "../chunks/topSearch/__top-search.css";
+@import "../chunks/topSearch/__adaptive-search.css";
 @import "../chunks/topSearch/__top-search-media.css";
 
 /* @import "__adaptive-menu.css";

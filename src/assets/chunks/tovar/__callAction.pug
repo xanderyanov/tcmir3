@@ -1,5 +1,23 @@
 mixin callAction
   .callAction__wrapper
+    .callAction__intro 
+      span.attention Внимание!
+      span Временно функционал сайта ограничен. Вы можете связться с продавцом для консультации по товару.
+    .callAction__area
+      //- .callAction__title Связаться с продавцом:
+      //- a.callAction(href="tel:88008888888")
+      //-   i.icon-phone1
+      //-   span 8-800-888-88-88
+
+      .callActionBtn
+        .callActionBtn__text Связаться с магазином
+        a.callAction__link(href="tel:88008888888")
+          i.icon-phone1
+          span 8-800-888-88-88
+
+      
+mixin callActionBtn
+  .callAction__wrapper
     //- .callAction__intro 
     //-   span.attention Внимание!
     //-   span Временно функционал сайта ограничен. Вы можете связться с продавцом для консультации по товару.
@@ -14,5 +32,3 @@ mixin callAction
         a.callAction__link(href="tel:88008888888")
           i.icon-phone1
           span 8-800-888-88-88
-
-      
