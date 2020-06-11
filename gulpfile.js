@@ -64,6 +64,7 @@ var jsfiles = [
   "node_modules/jquery/dist/jquery.min.js",
   "node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js",
   "node_modules/swiper/js/swiper.min.js",
+  "node_modules/slider-pro/dist/js/jquery.sliderPro.min.js",
   "node_modules/jquery.maskedinput/src/jquery.maskedinput.js",
   "node_modules/sweetalert/dist/sweetalert.min.js",
   // "node_modules/instafeed.js/instafeed.min.js"

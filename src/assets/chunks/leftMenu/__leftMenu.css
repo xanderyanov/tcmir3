@@ -67,20 +67,21 @@
   margin-top: -4px;
   width: 8px;
   height: 8px;
-  background: url(../../img/plus.png);
+  background: url(../img/plus.png);
   background-size: cover;
   /* border: 1px solid #000; */
 }
 
 .catalogMenu li.hasInner:hover > a:before {
-  background-image: url(../../img/plus-hover.png);
+  background-image: url(../img/plus-hover.png);
+  background-image: url(../img/plus-hover.png);
 }
 
 .catalogMenu li.hasInner.active > a:before {
-  background-image: url(../../img/plus-active.png);
+  background-image: url(../img/plus-active.png);
 }
 .catalogMenu li.hasInner.active:hover > a:before {
-  background-image: url(../../img/plus-active.png);
+  background-image: url(../img/plus-active.png);
 }
 
 .catalogMenu li a span {

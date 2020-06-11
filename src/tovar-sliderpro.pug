@@ -1,0 +1,38 @@
+- var pageTitle = 'Страница товара'
+
+include assets/chunks/header/__header
+include assets/chunks/breadcrumbs/__breadcrumbs
+include assets/chunks/tovar/__tovar-slider
+include assets/chunks/tovar/__tovar-info
+include assets/chunks/tovar/__tovarArsTab
+include assets/chunks/content/__textInContent
+include assets/chunks/footer/__footer
+include assets/chunks/scripts/__scripts
+
+<!DOCTYPE html>
+html(lang="ru-RU")
+	include assets/chunks/head/__head
+body
+
+	.site__header
+		+header
+
+	.site__center
+		+breadcrumbs
+
+		.xBlock__area.w0
+			.xBlock.w1
+				.tovarPage__area
+					.tovarPage
+						.tovarPage__top
+							//- +tovar-slider
+							+tovarSliderPro
+							+tovar-info
+				+tovarArsTab
+		//- +textInContent
+
+
+	.site__footer
+		+footer
+
+	+scripts

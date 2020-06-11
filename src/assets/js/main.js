@@ -250,6 +250,50 @@ $(function () {
     });
   }
 
+  $("#my-slider").sliderPro({
+    width: "100%",
+    height: 600,
+    arrows: true,
+    buttons: false,
+    waitForLayers: true,
+    centerImage: true,
+    autoSlideSize: false,
+    loop: false,
+    // smallSize: 500,
+    // mediumSize: 1000,
+    // largeSize: 3000,
+    fade: false,
+    autoplay: false,
+    autoScaleLayers: false,
+    imageScaleMode: "contain",
+    // thumbnailsScaleMode: "exact",
+    // fullScreen: true,
+    thumbnailsPosition: "right",
+    thumbnailPointer: false,
+    thumbnailWidth: 66,
+    thumbnailHeight: 100,
+    breakpoints: {
+      1280: {
+        height: 500,
+        thumbnailsPosition: "bottom",
+        // thumbnailWidth: 270,
+        // thumbnailHeight: 10,
+      },
+      768: {
+        thumbnails: hide,
+      },
+      // 800: {
+
+      // },
+      // 800: {
+
+      // },
+      // 500: {
+
+      // },
+    },
+  });
+
   // слайдер на странице магазина
   if ($(".swiper-container_shop").length) {
     var mySwiper1 = new Swiper(".swiper-container_shop", {
