@@ -255,42 +255,35 @@ $(function () {
     height: 600,
     arrows: true,
     buttons: false,
-    waitForLayers: true,
+    waitForLayers: false,
     centerImage: true,
     autoSlideSize: false,
     loop: false,
-    // smallSize: 500,
-    // mediumSize: 1000,
-    // largeSize: 3000,
     fade: false,
     autoplay: false,
     autoScaleLayers: false,
     imageScaleMode: "contain",
-    // thumbnailsScaleMode: "exact",
-    // fullScreen: true,
     thumbnailsPosition: "right",
     thumbnailPointer: false,
     thumbnailWidth: 66,
     thumbnailHeight: 100,
     breakpoints: {
-      1280: {
-        height: 500,
+      1024: {
+        height: 400,
         thumbnailsPosition: "bottom",
-        // thumbnailWidth: 270,
-        // thumbnailHeight: 10,
       },
       768: {
-        thumbnails: hide,
+        height: 400,
       },
-      // 800: {
-
-      // },
-      // 800: {
-
-      // },
-      // 500: {
-
-      // },
+      600: {
+        height: 350,
+      },
+      568: {
+        height: 320,
+      },
+      480: {
+        height: 320,
+      },
     },
   });
 

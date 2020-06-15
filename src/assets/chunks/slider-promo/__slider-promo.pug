@@ -5,19 +5,19 @@ mixin slider-promo
         .mainSlider
           .swiper-container.swiper-container1
             .swiper-wrapper
-              .swiper-slide.swiper-slide1(style='background-image: url(assets/img/xslider/01.jpg);')
+              .swiper-slide.swiper-slide1(style='background-image: url(assets/img/shop2/kasper2.jpg);')
                 .swiper__cadr
                   .swiper__infoBox
-                    .swiper__infoBoxTitle Заголовок слайда 1
-                    .swiper__infoBoxDescription Описание слайда 1 в несколько слов
-                    a.swiper__infoBoxLink(href='#') Подробнее...
+                    //- .swiper__infoBoxTitle Детская одежда
+                    //- .swiper__infoBoxDescription в магазине Каспер
+                    a.swiper__infoBoxLink(href='#') В магазин
                 img(src='assets/img/slider1cover.png', alt='')
-              .swiper-slide.swiper-slide1(style='background-image: url(assets/img/xslider/02.jpg);')
+              .swiper-slide.swiper-slide1(style='background-image: url(assets/img/shop2/kasper1.jpg);')
                 .swiper__cadr
                   .swiper__infoBox
-                    .swiper__infoBoxTitle Заголовок слайда 2
-                    .swiper__infoBoxDescription Описание слайда 2 в несколько слов
-                    a.swiper__infoBoxLink(href='#') Подробнее...
+                    //- .swiper__infoBoxTitle Одежда для девочек
+                    //- .swiper__infoBoxDescription Новая летняя коллекция в магазине Каспер
+                    a.swiper__infoBoxLink(href='#') В магазин
                 img(src='assets/img/slider1cover.png', alt='')
             // Add Pagination
             .swiper-pagination.swiper-pagination1
@@ -28,10 +28,10 @@ mixin slider-promo
               i.icon-arr-right1
       .promoBox__small
         .promoBox__smallInner.promoBox__smallInner_1
-          a(href='#')
-            img(src='assets/img/xslider/03.jpg', alt='')
-            span Зоголовок блока 2
-        .promoBox__smallInner.promoBox__smallInner_2
-          a(href='#')
-            img(src='assets/img/xslider/04.jpg', alt='')
-            span Зоголовок блока 3
+          a(href='#' style='background-image: url(assets/img/shop2/Giotto1.jpg);')
+            img(src='assets/img/slider1small.png', alt='')
+            span.promoBox__smallLink В магазин
+        .promoBox__smallInner.promoBox__smallInner_2 
+          a(href='#' style='background-image: url(assets/img/shop2/nebrosko1.jpg);')
+            img(src='assets/img/slider1small.png', alt='')
+            span.promoBox__smallLink В магазин
